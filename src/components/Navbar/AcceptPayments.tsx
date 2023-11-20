@@ -6,7 +6,7 @@ import Dropdown from './Dropdown';
 const AcceptPayments = (): JSX.Element => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-
+  console.log('ishovered', isHovered);
   return (
     <>
       <li
@@ -27,7 +27,12 @@ const AcceptPayments = (): JSX.Element => {
         {!isHovered && selectedOption && (
           <span className="text-primary">{selectedOption}</span>
         )}
-        <Dropdown isHovered={isHovered} setSelectedOption={setSelectedOption} />
+        <div>
+          <Dropdown
+            isHovered={isHovered}
+            setSelectedOption={setSelectedOption}
+          />
+        </div>
       </li>
     </>
   );

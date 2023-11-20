@@ -59,7 +59,7 @@ const Info = ({ title }: { title?: string }): JSX.Element => {
       ) : (
         // ................................................................................//
         <div className="w-full gap-[36px] flex flex-col ">
-          <h1 className="text-xl text-start font-semibold">
+          <h1 className="heading-primary">
             6 powerful reasons to chose Easypaisa <br />
             <span className="text-primary">Payment Gateway</span>
           </h1>

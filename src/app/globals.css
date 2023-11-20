@@ -2,32 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+@layer utilities {
+  .button-primary {
+    @apply w-[200px] py-[19px] px-[10px] min-h-[48px] bg-primary text-white rounded-[8px];
   }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
+  .heading-primary {
+    @apply font-semibold text-5xl text-dark leading-[60px];
   }
-
-  body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
-  } */
-/* Global Styles */
-/* body {
-  font-family: 'SF Pro Display', sans-serif;
-  margin: 0;
-  padding: 0;
-} */
+}

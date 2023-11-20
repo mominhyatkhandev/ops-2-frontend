@@ -33,15 +33,13 @@ const Partners = (): JSX.Element => {
   return (
     <>
       <div className="min-h-[640px] px-[200px] w-full inline-flex flex-col items-center justify-center mb-[20px]">
-        {/* <div className="min-h-[640px] w-full inline-flex flex-col items-center justify-center mb-[20px]"></div> */}
-
         <div className="gap-[36px] flex justify-center items-center flex-col">
           <h1 className="text-xl text-center font-semibold">
-            We power Pakistn’s biggest{' '}
+            We power Pakistan’s biggest{' '}
             <span className="text-primary">online brands</span>
           </h1>
         </div>
-        <div className="flex justify-center w-full py-[24px] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-[20px] ">
+        <div className="justify-center w-full py-[24px] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-[20px] ">
           {partnersImages.map((item, index) => (
             <Image
               src={item}

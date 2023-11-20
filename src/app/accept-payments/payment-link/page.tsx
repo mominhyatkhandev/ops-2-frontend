@@ -5,7 +5,7 @@ import Image from 'next/image';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
 import Info from '@/components/Content/Info/Info';
 
-const PaymentGateway = () => {
+const PaymentLink = () => {
   return (
     <>
       {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
@@ -14,29 +14,29 @@ const PaymentGateway = () => {
           src={paymentGatewayBG}
           alt="paymentGateway Background"
           layout="fill"
-          objectFit="cover"
+          // objectFit="cover"
           quality={100}
           className="absolute inset-0"
         />
-        <div className="flex w-[680px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
+        <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Trusted Payment Technology</span> by
-            Pakistan’s leading businesses & entrepreneurs
+            <span className="text-primary"> Automate Recurring Payments</span>{' '}
+            with EasyPaisa Subscriptions
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
-            Grow your business with Payment Gateway that powers Pakistan’s
-            largest brands and even through easypaisa app authorization.
+            collect recurring payments with multiple payment options to enable
+            growth for your subscription based businesses
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
         {/* <Info /> */}
       </div>
-      <div className="flex px-[200px]">
-        <Info title={'payment gateway'} />
-      </div>
+      {/* <div className="flex px-[200px]"> */}
+      <Info title={'subscription'} />
+      {/* </div> */}
       <Partners />
     </>
   );
 };
 
-export default PaymentGateway;
+export default PaymentLink;
