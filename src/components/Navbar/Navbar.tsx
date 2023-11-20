@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../UI/Button/SecondaryButton';
-import Logo from '../../assets/logo.svg';
+import Logo from '@/assets/icons/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import AcceptPayments from './AcceptPayments';

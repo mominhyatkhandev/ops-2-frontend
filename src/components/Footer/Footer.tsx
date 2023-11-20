@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import Logo from '../../assets/logo.svg';
-import phoneIcon from '../../assets/phoneIcon.png';
-import emailIcon from '../../assets/emailIcon.png';
+import Logo from "@/assets/icons/logo.svg"
+import phoneIcon from "@/assets/images/phoneIcon.png"
+import emailIcon from '@/assets/images/emailIcon.png';
 
 const Footer = () => {
   return (
