@@ -2,11 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Coin from '../../assets/card-coin.svg';
-import Scanner from '../../assets/scanner-nav.svg';
-import Shop from '../../assets/shop-nav.svg';
-import Money from '../../assets/money-nav.svg';
-import LinkIcon from '../../assets/link-angled-nav.svg';
+import Coin from '../../assets/icons/card-coin.svg';
+import Scanner from '../../assets/icons/scanner-nav.svg';
+import Shop from '../../assets/icons/shop-nav.svg';
+import Money from '../../assets/icons/money-nav.svg';
+import LinkIcon from '../../assets/icons/link-angled-nav.svg';
 import Link from 'next/link';
 
 interface IDropdownProps {
@@ -26,9 +26,10 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
     <>
       {isHovered && (
         <div className="absolute top-20 shadow-md p-[24px] ml-[70px] bg-white flex flex-col justify-start gap-[24px] w-[225px] items-start rounded-lg">
-          {dropDownList.map(item => (
-            <Link href={`/accept-payments/${item.link}`}>
+          {dropDownList.map((item, index) => (
+            <Link key={index} href={`/accept-payments/${item.link}`}>
               <div
+                key={index}
                 onClick={() => setSelectedOption(item.title)}
                 className="flex flex-row gap-[16px] items-start hover:text-primary hover:transition duration-300"
               >

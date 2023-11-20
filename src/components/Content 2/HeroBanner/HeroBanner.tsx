@@ -1,22 +1,13 @@
-import React from 'react';
-import Logo from '../../../assets/icons/logo.svg';
-import Button from '../../UI/Button/PrimaryButton';
-import heroBanner from '../../../assets/images/hero1.png';
 import Image from 'next/image';
+import React from 'react';
+import Logo from '../../../assets/logo.svg';
+import Button from '../../UI/Button/PrimaryButton';
+import './HeroBanner.css';
 
-const HeroBanner = (): JSX.Element => {
+const HeroBanner = () => {
   return (
-    <main className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
-      <Image
-        src={heroBanner}
-        alt="Hero Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="absolute inset-0"
-      />
-
-      <div className="flex flex-col gap-[48px] justify-center items-start rounded-lg relative z-10">
+    <div className="hb-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px]">
+      <div className="flex flex-col gap-[48px] justify-center items-start rounded-lg">
         <div className="flex flex-col gap-[24px]">
           <span className="flex justify-start items-center gap-[10px]">
             <p className="text-lg text-dark font-semibold">Welcome to</p>
@@ -35,7 +26,7 @@ const HeroBanner = (): JSX.Element => {
           className="w-[200px] py-[20px] px-[10px] min-h-[48px] bg-primary text-white rounded-[8px]"
         />
       </div>
-    </main>
+    </div>
   );
 };
 

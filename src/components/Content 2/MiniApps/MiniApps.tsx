@@ -1,21 +1,11 @@
 import React from 'react';
-import miniApps from '../../../assets/images/miniapps.png';
-import Image from 'next/image';
+import './MiniApps.css';
 
-const MiniApps = (): JSX.Element => {
+const MiniApps = () => {
   return (
     <div id="NewRootRoot" className="flex flex-col w-full mb-[20px]">
-      {/* <div className="ma-bg bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-center min-h-[640px] shrink-0 items-center"> */}
-      <div className="flex flex-col justify-center min-h-[640px] shrink-0 items-center relative">
-        <Image
-          src={miniApps}
-          alt="miniApps Background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="absolute inset-0"
-        />
-        <div className="shadow-[0px_4px_16px_0px_rgba(51,_51,_51,_0.08)] bg-white flex flex-col justify-center gap-16 w-2/3 h-auto shrink-0 items-center p-[40px] rounded-lg relative">
+      <div className="ma-bg bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-center min-h-[640px] shrink-0 items-center">
+        <div className="shadow-[0px_4px_16px_0px_rgba(51,_51,_51,_0.08)] bg-white flex flex-col justify-center gap-16 w-2/3 h-auto shrink-0 items-center p-[40px] rounded-lg">
           <div
             id="MiniApps1"
             className="text-xl font-semibold leading-[60px] text-dark"

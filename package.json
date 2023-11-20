@@ -42,8 +42,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{js,jsx,ts,tsx}": "next lint --fix",
     "*.{js,ts,tsx,jsx,css,md}": "prettier --write",
-    "*.{js,jsx,ts,tsx,css,md}": "git add"
+    "*.{js,jsx,ts,tsx,css,md}": "git add ."
   }
 }
