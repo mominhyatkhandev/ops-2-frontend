@@ -1,13 +1,12 @@
 import React from 'react';
 import Button from '@/components/UI/Button/PrimaryButton';
-import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
 import web from '@/assets/icons/global.svg';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
 import Info from '@/components/Content/Info/Info';
 import { TCard } from '@/types/static/static';
 
-const PaymentLink = () => {
+const MiniApps = () => {
   const cards: TCard[] = [
     {
       label: 'Digital Activation',
@@ -36,6 +35,7 @@ const PaymentLink = () => {
   ];
   return (
     <>
+      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentGatewayBG}
@@ -47,20 +47,18 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary">Collect Online Payments</span> with
-            from anywhere in Pakistan
+            <span className="text-primary"> easypaisa</span> Mini App Store
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
             A Feature Rich Ecosystem for Your Brand Showcase your Products and
-            Services to Pakistan's Largest online Audience
+            Services to Pakistan’s Largest online Audience.
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
       </div>
-      <Info title={'payment link'} cardsArray={cards} />
-      <Partners />
+      <Info title={'mini apps'} cardsArray={cards} />
     </>
   );
 };
 
-export default PaymentLink;
+export default MiniApps;

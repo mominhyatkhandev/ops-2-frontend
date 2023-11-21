@@ -29,7 +29,6 @@ const Subscription = () => {
           <Button label="Sign up" className="button-primary" />
         </div>
       </div>
-
       <Info title={'subscription'} />
       <Partners />
     </>

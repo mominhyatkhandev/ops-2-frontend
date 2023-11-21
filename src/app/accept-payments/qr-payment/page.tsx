@@ -1,16 +1,15 @@
 import React from 'react';
 import Button from '@/components/UI/Button/PrimaryButton';
-import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
-import web from '@/assets/icons/global.svg';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
 import Info from '@/components/Content/Info/Info';
 import { TCard } from '@/types/static/static';
+import web from '@/assets/icons/global.svg';
 
-const PaymentLink = () => {
+const QRPayments = () => {
   const cards: TCard[] = [
     {
-      label: 'Digital Activation',
+      label: 'Smooth & Easy onboarding process',
       logo: web,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
@@ -36,6 +35,7 @@ const PaymentLink = () => {
   ];
   return (
     <>
+      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentGatewayBG}
@@ -47,20 +47,20 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary">Collect Online Payments</span> with
-            from anywhere in Pakistan
+            <span className="text-primary"> Safe, secure and easy</span>{' '}
+            payments through QR code
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
-            A Feature Rich Ecosystem for Your Brand Showcase your Products and
-            Services to Pakistan's Largest online Audience
+            Hassel free real time settlements by receiving payment through
+            easypaisa QR/Till in a fast and secure way! Enjoy amazing cash back
+            offerings on becoming easypaisa QR Merchant.
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
       </div>
-      <Info title={'payment link'} cardsArray={cards} />
-      <Partners />
+      <Info title={'qr payments'} cardsArray={cards} />
     </>
   );
 };
 
-export default PaymentLink;
+export default QRPayments;
