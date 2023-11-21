@@ -16,7 +16,7 @@ const HeroBanner = (): JSX.Element => {
         className="absolute inset-0"
       />
 
-      <div className="flex flex-col gap-[48px] justify-center items-start rounded-lg relative z-10">
+      <div className="flex flex-col gap-[48px] justify-center items-start rounded-lg relative">
         <div className="flex flex-col gap-[24px]">
           <span className="flex justify-start items-center gap-[10px]">
             <p className="text-lg text-dark font-semibold">Welcome to</p>

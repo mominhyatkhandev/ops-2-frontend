@@ -1,13 +1,12 @@
 import React from 'react';
 import Button from '@/components/UI/Button/PrimaryButton';
-import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
+import web from '@/assets/icons/global.svg';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
 import Info from '@/components/Content/Info/Info';
 import { TCard } from '@/types/static/static';
-import web from '@/assets/icons/global.svg';
 
-const PaymentGateway = () => {
+const MiniApps = () => {
   const cards: TCard[] = [
     {
       label: 'Digital Activation',
@@ -42,29 +41,24 @@ const PaymentGateway = () => {
           src={paymentGatewayBG}
           alt="paymentGateway Background"
           layout="fill"
-          objectFit="cover"
+          // objectFit="cover"
           quality={100}
           className="absolute inset-0"
         />
-        <div className="flex w-[680px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
+        <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Trusted Payment Technology</span> by
-            Pakistan’s leading businesses & entrepreneurs
+            <span className="text-primary"> easypaisa</span> Mini App Store
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
-            Grow your business with Payment Gateway that powers Pakistan’s
-            largest brands and even through easypaisa app authorization.
+            A Feature Rich Ecosystem for Your Brand Showcase your Products and
+            Services to Pakistan’s Largest online Audience.
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
-        {/* <Info /> */}
       </div>
-      {/* <div className="flex px-[200px]"> */}
-      <Info title={'payment gateway'} cardsArray={cards} />
-      {/* </div> */}
-      <Partners />
+      <Info title={'mini apps'} cardsArray={cards} />
     </>
   );
 };
 
-export default PaymentGateway;
+export default MiniApps;

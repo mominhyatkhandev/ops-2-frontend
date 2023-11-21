@@ -29,11 +29,8 @@ const Subscription = () => {
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
-        {/* <Info /> */}
       </div>
-      {/* <div className="flex px-[200px]"> */}
       <Info title={'subscription'} />
-      {/* </div> */}
       <Partners />
     </>
   );
