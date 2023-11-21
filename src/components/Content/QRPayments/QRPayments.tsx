@@ -22,7 +22,7 @@ const QRPayments = () => {
             id="QRPayments1"
             className="text-xl font-semibold text-dark self-start"
           >
-            QR <span className="text-primary">Payments</span>
+            QR <span className="text-primary-base">Payments</span>
           </div>
           <div className="leading-[20px] font-normal text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -47,7 +47,7 @@ const QRPayments = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Safe, secure and easy</span>{' '}
+            <span className="text-primary-base"> Safe, secure and easy</span>{' '}
             payments through QR code
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">

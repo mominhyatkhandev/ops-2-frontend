@@ -32,7 +32,7 @@ const HeroBanner = (): JSX.Element => {
         </p>
         <Button
           label="Sign up"
-          className="w-[200px] py-[20px] px-[10px] min-h-[48px] bg-primary text-white rounded-[8px]"
+          className="w-[200px] py-[20px] px-[10px] min-h-[48px] bg-primary-base text-white rounded-[8px]"
         />
       </div>
     </main>

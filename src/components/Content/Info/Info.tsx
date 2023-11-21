@@ -15,7 +15,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <div className="">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
-              <span className="text-primary">Payment Gateway</span>
+              <span className="text-primary-base">Payment Gateway</span>
             </h1>
 
             <p className="text-base font-normal">
@@ -27,7 +27,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <>
             <h1 className="text-xl font-semibold">
               Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
+              <span className="text-primary-base">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,7 +38,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <>
             <h1 className="text-xl text-center font-semibold">
               Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
+              <span className="text-primary-base">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -49,7 +49,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <>
             <h1 className="text-xl font-semibold">
               Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
+              <span className="text-primary-base">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -60,7 +60,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <>
             <h1 className="text-xl font-semibold">
               Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
+              <span className="text-primary-base">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -70,7 +70,8 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
         ) : (
           <>
             <h1 className="text-xl text-center font-semibold">
-              Designed for <span className="text-primary">Entrepreneurs</span>
+              Designed for{' '}
+              <span className="text-primary-base">Entrepreneurs</span>
             </h1>
             <p className="text-base font-normal text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

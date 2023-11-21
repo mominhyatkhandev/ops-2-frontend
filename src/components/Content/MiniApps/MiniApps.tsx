@@ -20,7 +20,7 @@ const MiniApps = (): JSX.Element => {
             id="MiniApps1"
             className="text-xl font-semibold leading-[60px] text-dark"
           >
-            Mini <span className="text-primary">Apps</span>
+            Mini <span className="text-primary-base">Apps</span>
           </div>
           <div className="gap-[36px] grid lg:grid-cols-3 md:grid-cols-1">
             <div className=" leading-[20px] font-normal text-darkShade1 text-base">

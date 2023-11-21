@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
+@layer utilities {
   .button-primary {
-    @apply w-[200px] py-[19px] px-[10px] min-h-[48px] bg-primary text-white rounded-[8px];
+    @apply w-[200px] py-[19px] px-[10px] min-h-[48px] bg-primary-base text-white rounded-[8px];
   }
   .heading-primary {
     @apply font-semibold text-5xl text-dark leading-[60px];
   }
-} */
+}

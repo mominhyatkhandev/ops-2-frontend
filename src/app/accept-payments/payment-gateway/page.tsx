@@ -48,8 +48,11 @@ const PaymentGateway = () => {
         />
         <div className="flex w-[680px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Trusted Payment Technology</span> by
-            Pakistan’s leading businesses & entrepreneurs
+            <span className="text-primary-base">
+              {' '}
+              Trusted Payment Technology
+            </span>{' '}
+            by Pakistan’s leading businesses & entrepreneurs
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
             Grow your business with Payment Gateway that powers Pakistan’s

@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <ul className="w-full lg:inline-flex items-center justify-center space-x-[24px] hidden">
           <Link href={'/'}>
-            <li className="text-dark text-sm cursor-pointer px-2 hover:text-primary transition duration-300">
+            <li className="text-dark text-sm cursor-pointer px-2 hover:text-primary-base transition duration-300">
               Home
             </li>
           </Link>
@@ -24,17 +24,17 @@ const Navbar = () => {
 
           <div className="w-[1px] h-[10px] bg-greyish"></div>
 
-          <div className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary transition duration-300">
+          <div className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             Developer
           </div>
           <div className="w-[1px] h-[10px] bg-greyish"></div>
 
-          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary transition duration-300">
+          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             FAQs
           </li>
           <div className="w-[1px] h-[10px] bg-greyish"></div>
 
-          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary transition duration-300">
+          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             Contact Us
           </li>
           <div className="w-[1px] h-[10px] bg-greyish"></div>
@@ -44,7 +44,7 @@ const Navbar = () => {
           />
           <Button
             label="Sign up"
-            className="w-[96px] bg-primary font-normal text-white py-[14px] px-[10px] gap-10 rounded-[8px] "
+            className="w-[96px] bg-primary-base font-normal text-white py-[14px] px-[10px] gap-10 rounded-[8px] "
           />
         </ul>
       </div>

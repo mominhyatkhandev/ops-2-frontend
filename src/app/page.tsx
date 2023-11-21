@@ -6,9 +6,9 @@ import QRPayments from '@/components/Content/QRPayments/QRPayments';
 import PaymentLink from '@/components/Content/Paymentlink/PaymentLink';
 import MiniApps from '@/components/Content/MiniApps/MiniApps';
 import Footer from '@/components/Footer/Footer';
-import web from '../../../assets/icons/global.svg';
-import scanner from '../../../assets/icons/scanning.svg';
-import cartIcon from '../../../assets/icons/cartIcon.svg';
+import web from '@/assets/icons/global.svg';
+import scanner from '@/assets/icons/scanning.svg';
+import cartIcon from '@/assets/icons/cartIcon.svg';
 import { TCard } from '@/types/static/static';
 
 export default function Home() {

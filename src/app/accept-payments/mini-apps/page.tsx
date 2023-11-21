@@ -47,7 +47,7 @@ const MiniApps = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> easypaisa</span> Mini App Store
+            <span className="text-primary-base"> easypaisa</span> Mini App Store
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
             A Feature Rich Ecosystem for Your Brand Showcase your Products and

@@ -19,13 +19,13 @@ const AcceptPayments = (): JSX.Element => {
       >
         <span
           className={`${
-            isHovered && `text-primary hover:transition duration-300`
+            isHovered && `text-primary-base hover:transition duration-300`
           }`}
         >
           Accept Payments
         </span>
         {!isHovered && selectedOption && (
-          <span className="text-primary">{selectedOption}</span>
+          <span className="text-primary-base">{selectedOption}</span>
         )}
         <div>
           <Dropdown

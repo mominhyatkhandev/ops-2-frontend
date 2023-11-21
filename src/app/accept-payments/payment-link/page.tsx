@@ -48,7 +48,10 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Automate Recurring Payments</span>{' '}
+            <span className="text-primary-base">
+              {' '}
+              Automate Recurring Payments
+            </span>{' '}
             with EasyPaisa Subscriptions
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
