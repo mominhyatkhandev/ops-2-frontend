@@ -9,4 +9,11 @@
   .heading-primary {
     @apply font-semibold text-5xl text-dark leading-[60px];
   }
+  @responsive {
+    .button-size-small {
+      @apply w-[96px] py-[14px] px-[10px] gap-10;
+    }
+  }
 }
+
+/* py-[14px] px-[10px] gap-10 rounded-[8px] */

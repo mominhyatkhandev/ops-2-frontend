@@ -30,10 +30,7 @@ const HeroBanner = (): JSX.Element => {
           Introductory text, lorem ipsum, including QR, Online Payments and
           Mini-APPS
         </p>
-        <Button
-          label="Sign up"
-          className="w-[200px] py-[20px] px-[10px] min-h-[48px] bg-primary text-white rounded-[8px]"
-        />
+        <Button label="Sign up" className="button-primary" />
       </div>
     </main>
   );

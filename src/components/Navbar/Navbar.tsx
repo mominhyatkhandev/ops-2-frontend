@@ -44,7 +44,8 @@ const Navbar = () => {
           />
           <Button
             label="Sign up"
-            className="w-[96px] bg-primary font-normal text-white py-[14px] px-[10px] gap-10 rounded-[8px] "
+            // className="w-[96px] bg-primary font-normal text-white py-[14px] px-[10px] gap-10 rounded-[8px] "
+            className="button-primary button-size-small"
           />
         </ul>
       </div>

@@ -8,7 +8,6 @@ import Info from '@/components/Content/Info/Info';
 const PaymentLink = () => {
   return (
     <>
-      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentGatewayBG}
@@ -20,20 +19,19 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary"> Automate Recurring Payments</span>{' '}
-            with EasyPaisa Subscriptions
+            <span className="text-primary">Collect Online Payments</span> with
+            from anywhere in Pakistan
           </p>
           <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
-            collect recurring payments with multiple payment options to enable
-            growth for your subscription based businesses
+            A Feature Rich Ecosystem for Your Brand Showcase your Products and
+            Services to Pakistan's Largest online Audience
           </p>
           <Button label="Sign up" className="button-primary" />
         </div>
-        {/* <Info /> */}
       </div>
-      {/* <div className="flex px-[200px]"> */}
+
       <Info title={'subscription'} />
-      {/* </div> */}
+
       <Partners />
     </>
   );
