@@ -1,8 +1,5 @@
 import React from 'react';
 import Card from '../../UI/Card/Card';
-import web from '../../../assets/icons/global.svg';
-import scanner from '../../../assets/icons/scanning.svg';
-import cartIcon from '../../../assets/icons/cartIcon.svg';
 import { TCard } from '@/types/static/static';
 
 interface IInfoProp {
