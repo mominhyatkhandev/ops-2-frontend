@@ -14,37 +14,38 @@ const Navbar = () => {
         </div>
         <ul className="w-full lg:inline-flex items-center justify-center space-x-[24px] hidden">
           <Link href={'/'}>
-            <li className="text-dark text-sm cursor-pointer px-2 hover:text-primary-base transition duration-300">
+            <li className="text-secondary-base text-sm cursor-pointer px-2 hover:text-primary-base transition duration-300">
               Home
             </li>
           </Link>
-          <div className="w-[1px] h-[10px] bg-greyish"></div>
+          <div className="w-[1px] h-[10px] bg-border-dark"></div>
 
           <AcceptPayments />
 
-          <div className="w-[1px] h-[10px] bg-greyish"></div>
+          <div className="w-[1px] h-[10px] bg-border-dark"></div>
 
-          <div className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
+          <div className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             Developer
           </div>
-          <div className="w-[1px] h-[10px] bg-greyish"></div>
+          <div className="w-[1px] h-[10px] bg-border-dark"></div>
 
-          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
+          <li className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             FAQs
           </li>
-          <div className="w-[1px] h-[10px] bg-greyish"></div>
+          <div className="w-[1px] h-[10px] bg-border-dark"></div>
 
-          <li className="text-dark text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
+          <li className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             Contact Us
           </li>
-          <div className="w-[1px] h-[10px] bg-greyish"></div>
+          <div className="w-[1px] h-[10px] bg-border-dark"></div>
           <Button
             label="Login"
-            className="w-[96px] border-primary font-normal text-dark py-[14px] px-[10px] gap-10 rounded-[8px] border-[1.5px] "
+            className="w-[96px] border-primary-base font-normal text-secondary-base py-[14px] px-[10px] gap-10 rounded-[8px] border-[1.5px] "
           />
           <Button
             label="Sign up"
-            className="w-[96px] bg-primary-base font-normal text-white py-[14px] px-[10px] gap-10 rounded-[8px] "
+            // className="w-[96px] bg-primary font-normal text-neutral-white-base py-[14px] px-[10px] gap-10 rounded-[8px] "
+            className="button-primary button-size-small"
           />
         </ul>
       </div>

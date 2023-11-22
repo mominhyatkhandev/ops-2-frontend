@@ -54,7 +54,7 @@ const PaymentGateway = () => {
             </span>{' '}
             by Pakistan’s leading businesses & entrepreneurs
           </p>
-          <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
+          <p className="text-secondary-base text-base font-normal w-1/2 leading-[20px]">
             Grow your business with Payment Gateway that powers Pakistan’s
             largest brands and even through easypaisa app authorization.
           </p>

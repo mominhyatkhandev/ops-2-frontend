@@ -4,7 +4,7 @@
     id="Element1"
     className="bg-[url(https://file.rendit.io/n/ZuNbDVTaxWex1cTfTg8B.png)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-between pb-64 h-[768px] shrink-0 items-start"
   >
-    <div className="shadow-[0px_2px_6px_0px_rgba(51,_51,_51,_0.08)] bg-white self-stretch flex flex-row justify-between h-20 shrink-0 items-center pl-40 pr-48">
+    <div className="shadow-[0px_2px_6px_0px_rgba(51,_51,_51,_0.08)] bg-neutral-white-base self-stretch flex flex-row justify-between h-20 shrink-0 items-center pl-40 pr-48">
       <img
         src="https://file.rendit.io/n/5lihUYIdt5T8O157gFGH.svg"
         alt="Home1"
@@ -63,7 +63,7 @@
         >
           <div
             id="Button3"
-            className="text-center text-xs font-['SF_Pro_Display'] font-semibold leading-[14px] text-white"
+            className="text-center text-xs font-['SF_Pro_Display'] font-semibold leading-[14px] text-neutral-white-base"
           >
             Sign up
           </div>
@@ -106,7 +106,7 @@
         >
           <div
             id="Button1"
-            className="text-center text-sm font-['SF_Pro_Display'] font-semibold leading-[18px] text-white"
+            className="text-center text-sm font-['SF_Pro_Display'] font-semibold leading-[18px] text-neutral-white-base"
           >
             Sign up
           </div>

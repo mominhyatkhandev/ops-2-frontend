@@ -50,7 +50,7 @@ const QRPayments = () => {
             <span className="text-primary-base"> Safe, secure and easy</span>{' '}
             payments through QR code
           </p>
-          <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
+          <p className="text-secondary-base text-base font-normal w-1/2 leading-[20px]">
             Hassel free real time settlements by receiving payment through
             easypaisa QR/Till in a fast and secure way! Enjoy amazing cash back
             offerings on becoming easypaisa QR Merchant.

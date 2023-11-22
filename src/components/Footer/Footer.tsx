@@ -7,30 +7,33 @@ import emailIcon from '@/assets/images/emailIcon.png';
 const Footer = () => {
   return (
     <div className="flex flex-col justify-center w-full min-h-[350px] gap-[60px] items-center px-20 py-20">
-      <div className="bg-greyish2 h-[1px] w-full"></div>
+      <div className="bg-border-light h-[1px] w-full"></div>
       <div className="w-full flex justify-between">
         <div className="flex flex-col gap-[60px] min-h-[107px] items-start">
           <Image src={Logo} alt="logo" height={36} width={173} />
           <div
             id="Copyright"
-            className="leading-[20px] text-darkShade1 text-base font-normal"
+            className="leading-[20px] text-secondary-600 text-base font-normal"
           >
             Copyright © 2023 Easypaisa | All Rights Reserved{' '}
           </div>
         </div>
         <div className="flex flex-col justify-between min-h-[107px] gap-[24px] items-start">
-          <div id="FooterTitle" className="text-lg font-semibold text-dark">
+          <div
+            id="FooterTitle"
+            className="text-lg font-semibold text-secondary-base"
+          >
             Contact us
           </div>
           <div className="flex flex-row w-[310px] gap-[12px] items-start">
             <Image src={emailIcon} alt="email" height={20} width={20} />
-            <div className="leading-[20px] text-darkShade1 text-base font-normal">
+            <div className="leading-[20px] text-secondary-600 text-base font-normal">
               businesspartnersupport@telenorbank.pk
             </div>
           </div>
           <div className="flex flex-row gap-[12px] w-[310px] items-center">
             <Image src={phoneIcon} alt="phone" height={20} width={20} />
-            <div className="leading-[20px] text-darkShade1 text-base font-normal">
+            <div className="leading-[20px] text-secondary-600 text-base font-normal">
               62632 (10 AM to 5 PM)
             </div>
           </div>
@@ -47,7 +50,7 @@ export default Footer;
 //     <Image src={Logo} width={173} height={36} alt="logo" id="Home" />
 //     <div
 //       id="Copyright"
-//       className="font-['SF_Pro_Display'] leading-[20px] text-darkShade1"
+//       className="font-['SF_Pro_Display'] leading-[20px] text-secondary-600"
 //     >
 //       Copyright © 2023 Easypaisa | All Rights Reserved{" "}
 //     </div>

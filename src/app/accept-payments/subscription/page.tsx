@@ -8,7 +8,6 @@ import Info from '@/components/Content/Info/Info';
 const Subscription = () => {
   return (
     <>
-      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentGatewayBG}
@@ -26,7 +25,7 @@ const Subscription = () => {
             </span>{' '}
             with EasyPaisa Subscriptions
           </p>
-          <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
+          <p className="text-secondary-base text-base font-normal w-1/2 leading-[20px]">
             collect recurring payments with multiple payment options to enable
             growth for your subscription based businesses
           </p>

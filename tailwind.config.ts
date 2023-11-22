@@ -23,15 +23,10 @@ const config: Config = {
         'custom-bold': '700'
       },
       fontSize: {
-        xs: '0.75rem',
         sm: '14px',
         base: '16px',
         lg: '24px',
         xl: '48px',
-        '2xl': '1.5rem',
-        '3xl': '1.875rem',
-        '4xl': '2.25rem',
-        '5xl': '3rem',
         'custom-size': '4rem'
       }
     },
@@ -52,12 +47,6 @@ const config: Config = {
       '4xl-max': { max: '1850px' }
     },
     colors: {
-      white: '#ffffff',
-      greyish: '#D0D0D0',
-      greyish2: '#E7E7E7',
-      greyish3: '#F8F8F8',
-      dark: '#322C3C',
-      darkShade1: '#5b5663',
       primary: {
         50: '#E6F6ED',
         100: '#D0EFDD',
@@ -129,6 +118,40 @@ const config: Config = {
         700: '#A0233B',
         800: '#701729',
         900: '#410C16'
+      },
+      screen: {
+        white: '#FFFFFF',
+        grey: '#F8F8F8'
+      },
+      border: {
+        light: '#E7E7E7',
+        dark: '#D0D0D0'
+      },
+      neutral: {
+        black: {
+          50: '#E6E6E6',
+          100: '#CCCCCC',
+          200: '#B3B3B3',
+          300: '#999999',
+          400: '#808080',
+          500: '#666666',
+          600: '#4D4D4D',
+          700: '#333333',
+          800: '#191919',
+          base: '#000000'
+        },
+        white: {
+          base: '#FFFFFF',
+          100: '#FAFAFA',
+          200: '#E1E1E1',
+          300: '#C7C7C7',
+          400: '#ADADAD',
+          500: '#949494',
+          600: '#7B7B7B',
+          700: '#616161',
+          800: '#484848',
+          900: '#2E2E2E'
+        }
       }
     }
   },
