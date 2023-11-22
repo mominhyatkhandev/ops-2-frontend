@@ -7,7 +7,7 @@ import AcceptPayments from './AcceptPayments';
 
 const Navbar = () => {
   return (
-    <div className="w-auto h-[82px] flex items-center justify-center shadow-md py-[24px] relative">
+    <div className="w-auto h-[82px] flex items-center justify-center bg-neutral-white-base shadow-[0px_2px_6px_0px_rgba(51,_51,_51,_0.08)] py-[24px] relative">
       <div className="flex justify-between item-center gap-[166px]">
         <div className="flex items-center justify-center">
           <Image src={Logo} width={250} height={40} alt="logo" className="" />
@@ -31,11 +31,6 @@ const Navbar = () => {
 
           <li className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
             FAQs
-          </li>
-          <div className="w-[1px] h-[10px] bg-border-dark"></div>
-
-          <li className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300">
-            Contact Us
           </li>
           <div className="w-[1px] h-[10px] bg-border-dark"></div>
           <Button
