@@ -4,6 +4,7 @@ import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
 import subscriptionBG from '@/assets/images/subscription.jpg';
 import Info from '@/components/Content/Info/Info';
+import { cards } from '@/types/data';
 
 const Subscription = () => {
   return (
@@ -33,7 +34,7 @@ const Subscription = () => {
           <Button label="Sign up" className="button-primary" />
         </div>
       </div>
-      <Info title={'subscription'} />
+      <Info title={'subscription'} cardsArray={cards} />
       <Partners />
     </>
   );
