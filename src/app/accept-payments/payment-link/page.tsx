@@ -4,6 +4,7 @@ import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
 import web from '@/assets/icons/global.svg';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
+import paymentLinkBG from '@/assets/images/payment-link.jpg';
 import Info from '@/components/Content/Info/Info';
 import { TCard } from '@/types/static/static';
 
@@ -38,7 +39,7 @@ const PaymentLink = () => {
     <>
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
-          src={paymentGatewayBG}
+          src={paymentLinkBG}
           alt="paymentGateway Background"
           layout="fill"
           // objectFit="cover"
@@ -47,10 +48,11 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary">Collect Online Payments</span> with
+            <span className="text-primary">Collect Online Payments</span>
+            <br />
             from anywhere in Pakistan
           </p>
-          <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
+          <p className="text-dark text-base font-normal w-[657] leading-[20px]">
             A Feature Rich Ecosystem for Your Brand Showcase your Products and
             Services to Pakistan's Largest online Audience
           </p>

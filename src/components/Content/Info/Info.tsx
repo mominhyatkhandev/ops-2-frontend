@@ -9,10 +9,11 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-    <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center">
-      <div className="w-full gap-[36px] flex flex-col justify-center items-center">
+    <div className="min-h-[640px] w-full inline-flex flex-col ">
+      {/* <div className="w-full gap-[36px] flex flex-col justify-center items-center"> */}
+      <div className="w-full gap-[36px] flex flex-col ">
         {title == 'payment gateway' ? (
-          <div className="">
+          <div className="px-[200px]">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
               <span className="text-primary">Payment Gateway</span>
@@ -24,48 +25,56 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </p>
           </div>
         ) : title === 'payment link' ? (
-          <>
-            <h1 className="text-xl font-semibold">
+          <div className="px-[200px]">
+            <h1 className="heading-primary">
               Get Registered, start accepting payments.
+              <br />
               <span className="text-primary">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
-          </>
+          </div>
         ) : title === 'qr payments' ? (
           <>
-            <h1 className="text-xl text-center font-semibold">
+            <div className="px-[200px]">
+              <h1 className="heading-primary">
+                Get Registered, start accepting payments.
+                <br />
+                <span className="text-primary">It’s that simple!</span>
+              </h1>
+              <p className="text-base font-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmodtempor incididunt ut labore et dolore
+              </p>
+            </div>
+          </>
+        ) : title == 'subscription' ? (
+          <div className="px-[200px]">
+            <h1 className="heading-primary">
               Get Registered, start accepting payments.
+              <br />
               <span className="text-primary">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
-          </>
-        ) : title == 'subscription' ? (
-          <>
-            <h1 className="text-xl font-semibold">
-              Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
-            </h1>
-            <p className="text-base font-normal text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodtempor incididunt ut labore et dolore
-            </p>
-          </>
+          </div>
         ) : title == 'mini apps' ? (
           <>
-            <h1 className="text-xl font-semibold">
-              Get Registered, start accepting payments.
-              <span className="text-primary">It’s that simple!</span>
-            </h1>
-            <p className="text-base font-normal text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodtempor incididunt ut labore et dolore
-            </p>
+            <div className="px-[200px]">
+              <h1 className="heading-primary">
+                Get Registered, start accepting payments.
+                <br />
+                <span className="text-primary">It’s that simple!</span>
+              </h1>
+              <p className="text-base font-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmodtempor incididunt ut labore et dolore
+              </p>
+            </div>
           </>
         ) : (
           <>

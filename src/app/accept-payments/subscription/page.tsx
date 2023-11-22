@@ -3,6 +3,7 @@ import Button from '@/components/UI/Button/PrimaryButton';
 import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
 import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
+import subscriptionBG from '@/assets/images/subscription.jpg';
 import Info from '@/components/Content/Info/Info';
 
 const Subscription = () => {
@@ -10,10 +11,11 @@ const Subscription = () => {
     <>
       <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
         <Image
-          src={paymentGatewayBG}
-          alt="paymentGateway Background"
+          src={subscriptionBG}
+          alt="Subscription Background"
           layout="fill"
           // objectFit="cover"
+          // height={100}
           quality={100}
           className="absolute inset-0"
         />
@@ -22,8 +24,8 @@ const Subscription = () => {
             <span className="text-primary"> Automate Recurring Payments</span>{' '}
             with EasyPaisa Subscriptions
           </p>
-          <p className="text-dark text-base font-normal w-1/2 leading-[20px]">
-            collect recurring payments with multiple payment options to enable
+          <p className="text-dark text-base font-normal w-[750px] leading-[20px]">
+            Collect recurring payments with multiple payment options to enable
             growth for your subscription based businesses
           </p>
           <Button label="Sign up" className="button-primary" />

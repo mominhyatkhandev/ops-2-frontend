@@ -11,7 +11,7 @@ const AcceptPayments = (): JSX.Element => {
     <>
       <li
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         onClick={() => setIsHovered(!isHovered)}
         className={`relative text-dark text-sm cursor-pointer text-center px-2 h-[82px] flex ${
           selectedOption && `flex-col items-start justify-start`
