@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
-import paymentGatewayBG from '@/assets/images/payment-gateway.jpg';
 import subscriptionBG from '@/assets/images/subscription.jpg';
 import Info from '@/components/Content/Info/Info';
 
