@@ -53,7 +53,7 @@ const MiniApps = () => {
           {/* <p className="text-dark text-base font-normal w-[657] leading-[20px]">
             <span className="text-primary-base"> easypaisa</span> Mini App Store
           </p> */}
-          <p className="text-secondary-base text-base font-normal w-1/2 leading-[20px]">
+          <p className="text-secondary-base text-base font-normal w-[657] leading-[20px]">
             A Feature Rich Ecosystem for Your Brand Showcase your Products and
             Services to Pakistan’s Largest online Audience.
           </p>
