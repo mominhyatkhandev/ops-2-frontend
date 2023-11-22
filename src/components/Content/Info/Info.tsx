@@ -16,7 +16,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <div className="px-[200px]">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
-              <span className="text-primary">Payment Gateway</span>
+              <span className="text-primary-base">Payment Gateway</span>
             </h1>
 
             <p className="text-base font-normal">
@@ -29,7 +29,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
-              <span className="text-primary">It’s that simple!</span>
+              <span className="text-primary-base">It’s that simple!</span>
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -54,13 +54,18 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           <div className="px-[200px]">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
+<<<<<<< HEAD
               <br />
               <span className="text-primary">It’s that simple!</span>
+=======
+              <span className="text-primary-base">It’s that simple!</span>
+>>>>>>> e7b2a914fec25eb03aa6cf3d7d451f239825cc5e
             </h1>
             <p className="text-base font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
+<<<<<<< HEAD
           </div>
         ) : title == 'mini apps' ? (
           <>
@@ -75,11 +80,36 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
                 eiusmodtempor incididunt ut labore et dolore
               </p>
             </div>
+=======
+          </>
+        ) : title == 'subscription' ? (
+          <>
+            <h1 className="text-xl font-semibold">
+              Get Registered, start accepting payments.
+              <span className="text-primary-base">It’s that simple!</span>
+            </h1>
+            <p className="text-base font-normal text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmodtempor incididunt ut labore et dolore
+            </p>
+          </>
+        ) : title == 'mini apps' ? (
+          <>
+            <h1 className="text-xl font-semibold">
+              Get Registered, start accepting payments.
+              <span className="text-primary-base">It’s that simple!</span>
+            </h1>
+            <p className="text-base font-normal text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmodtempor incididunt ut labore et dolore
+            </p>
+>>>>>>> e7b2a914fec25eb03aa6cf3d7d451f239825cc5e
           </>
         ) : (
           <>
             <h1 className="text-xl text-center font-semibold">
-              Designed for <span className="text-primary">Entrepreneurs</span>
+              Designed for{' '}
+              <span className="text-primary-base">Entrepreneurs</span>
             </h1>
             <p className="text-base font-normal text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

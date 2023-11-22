@@ -48,11 +48,11 @@ const PaymentLink = () => {
         />
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
-            <span className="text-primary">Collect Online Payments</span>
+            <span className="text-primary-base">Collect Online Payments</span>
             <br />
             from anywhere in Pakistan
           </p>
-          <p className="text-dark text-base font-normal w-[657] leading-[20px]">
+          <p className="text-secondary-base text-base font-normal w-[657] leading-[20px]">
             A Feature Rich Ecosystem for Your Brand Showcase your Products and
             Services to Pakistan's Largest online Audience
           </p>

@@ -25,13 +25,13 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
   return (
     <>
       {isHovered && (
-        <div className="absolute top-20 left-0 shadow-md p-[24px] bg-white flex flex-col justify-start gap-[24px] w-[225px] items-start rounded-lg z-10">
+        <div className="absolute top-20 left-0 shadow-md p-[24px] bg-neutral-white-base flex flex-col justify-start gap-[24px] w-[225px] items-start rounded-lg z-10">
           {dropDownList.map((item, index) => (
             <Link key={index} href={`/accept-payments/${item.link}`}>
               <div
                 key={index}
                 onClick={() => setSelectedOption(item.title)}
-                className="flex flex-row gap-[16px] items-start hover:text-primary hover:transition duration-300"
+                className="flex flex-row gap-[16px] items-start hover:text-primary-base hover:transition duration-300"
               >
                 <Image src={item.icon} width={24} height={24} alt="coin" />
                 <span>{item.title}</span>
@@ -48,25 +48,25 @@ export default Dropdown;
 
 {
   /* //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary hover:transition duration-300">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base hover:transition duration-300">
         //         <Image src={Scanner} width={24} height={24} alt="coin" />
         //         <span>QR Payments</span>
         //       </div>
         //     </Link>
         //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
         //         <Image src={Shop} width={24} height={24} alt="coin" />
         //         <span>Mini Apps</span>
         //       </div>
         //     </Link>
         //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
         //         <Image src={Money} width={24} height={24} alt="coin" />
         //         <span>Payment Link</span>
         //       </div>
         //     </Link>
         //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
         //         <Image src={LinkIcon} width={24} height={24} alt="coin" />
         //         <span>Subscription</span>
         //       </div>
