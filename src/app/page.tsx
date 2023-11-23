@@ -10,34 +10,35 @@ import web from '@/assets/icons/global.svg';
 import scanner from '@/assets/icons/scanning.svg';
 import cartIcon from '@/assets/icons/cartIcon.svg';
 import { TCard } from '@/types/static/static';
+import { cards } from '@/types/data';
 
 export default function Home() {
-  const cards: TCard[] = [
-    {
-      label: 'Online Payments',
-      logo: web,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
-    },
-    {
-      label: 'QR Integration',
-      logo: scanner,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
-    },
-    {
-      label: 'Mini Apps',
-      logo: cartIcon,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
-    },
-    {
-      label: 'Payment link',
-      logo: web,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
-    }
-  ];
+  // const cards: TCard[] = [
+  //   {
+  //     label: 'Online Payments',
+  //     logo: web,
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
+  //   },
+  //   {
+  //     label: 'QR Integration',
+  //     logo: scanner,
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
+  //   },
+  //   {
+  //     label: 'Mini Apps',
+  //     logo: cartIcon,
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
+  //   },
+  //   {
+  //     label: 'Payment link',
+  //     logo: web,
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
+  //   }
+  // ];
   return (
     <main className="">
       {/* <Navbar /> */}

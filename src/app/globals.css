@@ -12,6 +12,10 @@
   .heading-primary {
     @apply font-semibold text-5xl text-secondary-base leading-[60px];
   }
+  /* .card-container {
+    @apply transition duration-300 border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white;
+    
+  } */
   @responsive {
     .button-size-small {
       @apply w-[96px] py-[14px] px-[10px] gap-10;
