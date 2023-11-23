@@ -15,8 +15,8 @@ const Card = ({
   logo,
   label,
   description // className,
-  // children
-}: ICardProps) => {
+} // children
+: ICardProps) => {
   return (
     //   <div
     //     className={` group border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer  hover:bg-primary-base hover:text-white
