@@ -9,7 +9,7 @@ import { cards } from '@/types/data';
 const PaymentLink = () => {
   return (
     <>
-      <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
+      <div className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentLinkBG}
           alt="paymentGateway Background"

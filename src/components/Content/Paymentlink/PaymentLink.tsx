@@ -18,7 +18,7 @@ const PaymentLink = (): JSX.Element => {
         <div className="shadow-[0px_4px_16px_0px_rgba(51,_51,_51,_0.08)] bg-neutral-white-base max-w-[560px] flex flex-col justify-center py-[40px] px-[32px] gap-[60px] shrink-0 items-start rounded-lg relative">
           <div
             id="PaymentLink1"
-            className="text-xl font-semibold text-secondary-base"
+            className="text-5xl font-semibold text-secondary-base"
           >
             Payment <span className="text-primary-base">link</span>
           </div>

@@ -20,7 +20,7 @@ const QRPayments = () => {
         <div className="shadow-[0px_4px_16px_0px_rgba(51,_51,_51,_0.08)] max-w-[560px] bg-neutral-white-base flex flex-col justify-center py-[40px] px-[32px] gap-[60px] h-auto shrink-0 items-start rounded-lg relative">
           <div
             id="QRPayments1"
-            className="text-xl font-semibold text-secondary-base self-start"
+            className="text-5xl font-semibold text-secondary-base self-start"
           >
             QR <span className="text-primary-base">Payments</span>
           </div>

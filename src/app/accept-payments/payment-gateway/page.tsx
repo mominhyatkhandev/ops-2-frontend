@@ -10,7 +10,7 @@ const PaymentGateway = () => {
   return (
     <>
       {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
-      <div className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
+      <div className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
         <Image
           src={paymentGatewayBG}
           alt="paymentGateway Background"

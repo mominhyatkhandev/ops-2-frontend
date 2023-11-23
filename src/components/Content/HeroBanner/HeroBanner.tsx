@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const HeroBanner = (): JSX.Element => {
   return (
-    <main className="flex items-center justify-start p-[200px] mb-[20px] h-[660px] relative">
+    <main className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
       <Image
         src={heroBanner}
         alt="Hero Background"
@@ -17,14 +17,14 @@ const HeroBanner = (): JSX.Element => {
       />
 
       <div className="flex flex-col gap-[48px] justify-center items-start rounded-lg relative">
-        <div className="flex flex-col gap-[24px]">
+        <div className="flex flex-col gap-6">
           <span className="flex justify-start items-center gap-[10px]">
-            <p className="text-lg text-secondary-base font-semibold">
+            <p className="text-2xl text-secondary-base font-semibold">
               Welcome to
             </p>
             <Image src={Logo} alt="logo" width={100} height={40} />
           </span>
-          <p className="font-semibold text-xl text-secondary-base leading-[60px]">
+          <p className="font-semibold text-5xl text-secondary-base leading-[60px]">
             Merchant Portal
           </p>
         </div>
