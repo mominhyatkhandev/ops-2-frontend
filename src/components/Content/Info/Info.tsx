@@ -9,14 +9,8 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-<<<<<<< Updated upstream
-    <div className="min-h-[640px] w-full inline-flex flex-col ">
-      {/* <div className="w-full gap-[36px] flex flex-col justify-center items-center"> */}
-      <div className="w-full gap-[36px] flex flex-col ">
-=======
     <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center">
       <div className="w-full gap-9 flex flex-col justify-center items-center">
->>>>>>> Stashed changes
         {title == 'payment gateway' ? (
           <div className="px-[200px]">
             <h1 className="heading-primary">
@@ -30,13 +24,8 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </p>
           </div>
         ) : title === 'payment link' ? (
-<<<<<<< Updated upstream
           <div className="px-[200px]">
             <h1 className="heading-primary">
-=======
-          <>
-            <h1 className="text-5xl font-semibold">
->>>>>>> Stashed changes
               Get Registered, start accepting payments.
               <br />
               <span className="text-primary-base">It’s that simple!</span>
@@ -48,7 +37,6 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title === 'qr payments' ? (
           <>
-<<<<<<< Updated upstream
             <div className="px-[200px]">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
@@ -64,9 +52,6 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
         ) : title == 'subscription' ? (
           <div className="px-[200px]">
             <h1 className="heading-primary">
-=======
-            <h1 className="text-5xl font-semibold">
->>>>>>> Stashed changes
               Get Registered, start accepting payments.
               <br />
               <span className="text-primary-base">It’s that simple!</span>
@@ -75,7 +60,6 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
-<<<<<<< Updated upstream
           </div>
         ) : title == 'mini apps' ? (
           <>
@@ -90,30 +74,6 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
                 eiusmodtempor incididunt ut labore et dolore
               </p>
             </div>
-=======
-          </>
-        ) : title == 'subscription' ? (
-          <>
-            <h1 className="text-5xl font-semibold">
-              Get Registered, start accepting payments.
-              <span className="text-primary-base">It’s that simple!</span>
-            </h1>
-            <p className="text-base font-normal text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodtempor incididunt ut labore et dolore
-            </p>
-          </>
-        ) : title == 'mini apps' ? (
-          <>
-            <h1 className="text-5xl font-semibold">
-              Get Registered, start accepting payments.
-              <span className="text-primary-base">It’s that simple!</span>
-            </h1>
-            <p className="text-base font-normal text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodtempor incididunt ut labore et dolore
-            </p>
->>>>>>> Stashed changes
           </>
         ) : (
           <>

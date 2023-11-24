@@ -52,7 +52,6 @@ const Card = ({
       <div className="w-[48px] h-[48px] flex items-center justify-center transition-opacity opacity-100 group-hover:opacity-0 absolute">
         <Image src={logo.image1} alt={'image'} />
       </div>
-<<<<<<< Updated upstream
 
       <div className="w-[48px] h-[48px]  items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 absolute">
         <Image
@@ -66,13 +65,6 @@ const Card = ({
 
       <div className="self-stretch flex flex-col gap-[24px] items-start mt-[60px] ">
         <div className="text-lg font-semibold leading-[32px] w-full">
-=======
-      <div className="self-stretch flex flex-col gap-6 items-start">
-        <div
-          id={label}
-          className="text-2xl font-semibold leading-[32px] w-full"
-        >
->>>>>>> Stashed changes
           {label}
         </div>
         <div className="leading-[20px] text-secondary-600 group-hover:text-white text-base w-full">
