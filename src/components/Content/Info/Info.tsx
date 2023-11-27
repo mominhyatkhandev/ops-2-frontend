@@ -12,7 +12,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
     <div className=" w-full inline-flex flex-col justify-center items-center">
       <div className="w-full gap-9 flex flex-col justify-center items-center">
         {title == 'payment gateway' ? (
-          <div className="px-[200px]">
+          <div className="px-[150px]">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
               <span className="text-primary-base">Payment Gateway</span>
@@ -24,7 +24,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </p>
           </div>
         ) : title === 'payment link' ? (
-          <div className="px-[200px]">
+          <div className="px-[150px]">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
@@ -37,7 +37,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title === 'qr payments' ? (
           <>
-            <div className="px-[200px]">
+            <div className="px-[150px]">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />
@@ -50,7 +50,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </div>
           </>
         ) : title == 'subscription' ? (
-          <div className="px-[200px]">
+          <div className="px-[150px]">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
@@ -63,7 +63,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title == 'mini apps' ? (
           <>
-            <div className="px-[200px]">
+            <div className="px-[150px]">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />

@@ -14,7 +14,8 @@ const AcceptPayments = ({
   const [selectedOption, setSelectedOption] = useState<string>('');
 
   useEffect(() => {
-    if (other == 'Home' || other == 'Developer' || other == 'FAQS') {
+    if (other == 'Home' || other == 'Developer' || other == 'FAQs') {
+      console.log('other', other);
       setSelectedOption('');
     }
   }, [other, clickTrigger]);
@@ -55,10 +56,6 @@ const AcceptPayments = ({
           <Dropdown
             isHovered={isHovered}
             setSelectedOption={setSelectedOption}
-            // setSelectedOption={option => {
-            //   setSelectedOptionLocal(option);
-            //   setSelectedOption(option);
-            // }}
           />
         </div>
       </li>
