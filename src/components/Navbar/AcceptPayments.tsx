@@ -1,12 +1,24 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropdown from './Dropdown';
 
-const AcceptPayments = (): JSX.Element => {
+const AcceptPayments = ({
+  other,
+  clickTrigger
+}: {
+  other: string;
+  clickTrigger: boolean;
+}): JSX.Element => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-  console.log('ishovered', isHovered);
+
+  useEffect(() => {
+    if (other == 'Home' || other == 'Developer' || other == 'FAQS') {
+      setSelectedOption('');
+    }
+  }, [other, clickTrigger]);
+
   return (
     <>
       <li
@@ -17,20 +29,36 @@ const AcceptPayments = (): JSX.Element => {
           selectedOption && `flex-col items-start justify-start`
         } items-center justify-center`}
       >
-        <span
-          className={`${
-            isHovered && `text-primary-base hover:transition duration-300`
-          }`}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            // marginTop: '20px'
+            marginTop: !isHovered && selectedOption !== '' ? '20px' : '0px'
+          }}
         >
-          Accept Payments
-        </span>
-        {!isHovered && selectedOption && (
-          <span className="text-primary-base">{selectedOption}</span>
-        )}
+          <div
+            className={`${
+              isHovered && `text-primary-base hover:transition duration-300`
+            }`}
+          >
+            Accept Payments
+          </div>
+          {!isHovered && selectedOption && (
+            <div className="text-primary-base flex flex-start">
+              {selectedOption}
+            </div>
+          )}
+        </div>
+
         <div>
           <Dropdown
             isHovered={isHovered}
             setSelectedOption={setSelectedOption}
+            // setSelectedOption={option => {
+            //   setSelectedOptionLocal(option);
+            //   setSelectedOption(option);
+            // }}
           />
         </div>
       </li>

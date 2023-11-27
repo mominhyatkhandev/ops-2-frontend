@@ -9,8 +9,8 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-    <div className="min-h-[640px] w-full inline-flex flex-col ">
-      {/* <div className="w-full gap-[36px] flex flex-col justify-center items-center"> */}
+    <div className="w-full inline-flex flex-col ">
+      {/* <div className="min-h-[640px] w-full inline-flex flex-col "> */}
       <div className="w-full gap-[36px] flex flex-col ">
         {title == 'payment gateway' ? (
           <div className="px-[200px]">

@@ -6,7 +6,7 @@ const PaymentLink = (): JSX.Element => {
   return (
     <div id="NewRootRoot" className="flex flex-col w-full mb-[20px]">
       {/* <div className="pl-bg bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-end min-h-[640px] shrink-0 items-end pr-40 py-24"> */}
-      <div className="flex flex-col justify-end min-h-[640px] shrink-0 items-end pr-40 py-24 relative">
+      <div className="flex flex-col justify-end shrink-0 items-end pr-40 py-24 relative">
         <Image
           src={paymentLink}
           alt="Payments-Link Background"

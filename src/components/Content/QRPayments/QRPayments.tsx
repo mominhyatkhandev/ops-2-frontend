@@ -7,7 +7,7 @@ const QRPayments = () => {
   return (
     <div id="NewRootRoot" className="flex flex-col w-full mb-[20px]">
       {/* <div className="qr-bg bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-end min-h-[640px] shrink-0 items-start pl-40 py-24"> */}
-      <div className="flex flex-col justify-end min-h-[640px] shrink-0 items-start pl-40 py-24 relative">
+      <div className="flex flex-col justify-end shrink-0 items-start pl-40 py-24 relative">
         <Image
           src={qrPayments}
           alt="QrPayments Background"
