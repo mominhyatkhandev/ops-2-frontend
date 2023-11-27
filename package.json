@@ -42,8 +42,8 @@
     }
   },
   "lint-staged": {
-    "src/app/*.{js,jsx,ts,tsx}": "next lint",
-    "src/app/*.{js,ts,tsx,jsx,css,md}": "prettier --write",
-    "src/app/*.{js,jsx,ts,tsx,css,md}": "git add ."
+    "src/*.{js,jsx,ts,tsx}": "next lint",
+    "src/*.{js,ts,tsx,jsx,css,md}": "prettier --write",
+    "src/*.{js,jsx,ts,tsx,css,md}": "git add ."
   }
 }

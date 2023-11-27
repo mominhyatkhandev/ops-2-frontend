@@ -18,6 +18,7 @@ const MiniApps = () => {
           quality={100}
           className="absolute inset-0"
         />
+        <div>HUSKYYYY</div>
         <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
           <p className="heading-primary">
             <span className="text-primary-base"> easypaisa</span>
