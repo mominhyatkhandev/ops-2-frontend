@@ -42,7 +42,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,css,md}": [
+    "src/app/*.{js,jsx,ts,tsx,css,md}": [
       "next lint",
       "prettier --write",
       "git add ."
