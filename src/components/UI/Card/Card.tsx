@@ -17,6 +17,7 @@ const Card = ({ logo, label, description }: ICardProps) => {
       <div className="flex items-center justify-center transition-opacity opacity-100 group-hover:opacity-0 absolute">
         <Image src={logo.image1} alt={'image'} height={32} width={32} />
       </div>
+      <div>HUSKYYYYYY</div>
 
       <div className="items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 absolute">
         <Image
