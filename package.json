@@ -42,7 +42,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,html,css}": "prettier --write",
-    "src/**/*.{ts,tsx}": "next lint"
+    "@/src/app/**/*.{js,html,css}": "prettier --write",
+    "@/src/app/**/*.{ts,tsx}": "next lint"
   }
 }
