@@ -8,6 +8,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-console": "warn"
+    "no-console": "warn",
+    "react/no-unescaped-entities": "off"
   }
 }

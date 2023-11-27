@@ -22,15 +22,8 @@ const config: Config = {
       fontWeight: {
         light: '300',
         normal: '400',
-        semibold: '600',
-        'custom-bold': '700'
-      },
-      fontSize: {
-        sm: '14px',
-        base: '16px',
-        lg: '24px',
-        xl: '48px',
-        'custom-size': '4rem'
+        500: '500',
+        semibold: '600'
       }
     },
     screens: {

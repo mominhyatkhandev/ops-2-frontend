@@ -31,7 +31,7 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
               <div
                 key={index}
                 onClick={() => setSelectedOption(item.title)}
-                className="flex flex-row gap-[16px] items-start hover:text-primary-base hover:transition duration-300"
+                className="flex flex-row gap-4 items-start hover:text-primary-base hover:transition duration-300"
               >
                 <Image src={item.icon} width={24} height={24} alt="coin" />
                 <span>{item.title}</span>
@@ -45,3 +45,33 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
 };
 
 export default Dropdown;
+
+{
+  /* //     <Link href="/">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base hover:transition duration-300">
+        //         <Image src={Scanner} width={24} height={24} alt="coin" />
+        //         <span>QR Payments</span>
+        //       </div>
+        //     </Link>
+        //     <Link href="/">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
+        //         <Image src={Shop} width={24} height={24} alt="coin" />
+        //         <span>Mini Apps</span>
+        //       </div>
+        //     </Link>
+        //     <Link href="/">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
+        //         <Image src={Money} width={24} height={24} alt="coin" />
+        //         <span>Payment Link</span>
+        //       </div>
+        //     </Link>
+        //     <Link href="/">
+        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
+        //         <Image src={LinkIcon} width={24} height={24} alt="coin" />
+        //         <span>Subscription</span>
+        //       </div>
+        //     </Link>
+        //     {/* Add more menu items as needed */
+}
+//   </div>
+// )} */}

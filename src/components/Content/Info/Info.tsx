@@ -9,9 +9,8 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-    <div className="w-full inline-flex flex-col ">
-      {/* <div className="min-h-[640px] w-full inline-flex flex-col "> */}
-      <div className="w-full gap-[36px] flex flex-col ">
+    <div className=" w-full inline-flex flex-col justify-center items-center">
+      <div className="w-full gap-9 flex flex-col justify-center items-center">
         {title == 'payment gateway' ? (
           <div className="px-[200px]">
             <h1 className="heading-primary">
@@ -78,7 +77,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </>
         ) : (
           <>
-            <h1 className="text-xl text-center font-semibold">
+            <h1 className="text-5xl text-center font-semibold">
               Designed for{' '}
               <span className="text-primary-base">Entrepreneurs</span>
             </h1>
@@ -89,7 +88,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </>
         )}
 
-        <div className="py-[24px] px-[200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
+        <div className="py-[24px] px-[150px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {cardsArray?.map((item, index) => {
             return (
               <Card

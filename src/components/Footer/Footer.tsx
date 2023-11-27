@@ -18,20 +18,20 @@ const Footer = () => {
             Copyright © 2023 Easypaisa | All Rights Reserved{' '}
           </div>
         </div>
-        <div className="flex flex-col justify-between min-h-[107px] gap-[24px] items-start">
+        <div className="flex flex-col justify-between min-h-[107px] gap-6 items-start">
           <div
             id="FooterTitle"
-            className="text-lg font-semibold text-secondary-base"
+            className="text-2xl font-semibold text-secondary-base"
           >
             Contact us
           </div>
-          <div className="flex flex-row w-[310px] gap-[12px] items-start">
+          <div className="flex flex-row w-[310px] gap-3 items-start">
             <Image src={emailIcon} alt="email" height={20} width={20} />
             <div className="leading-[20px] text-secondary-600 text-base font-normal">
               businesspartnersupport@telenorbank.pk
             </div>
           </div>
-          <div className="flex flex-row gap-[12px] w-[310px] items-center">
+          <div className="flex flex-row gap-3 w-[310px] items-center">
             <Image src={phoneIcon} alt="phone" height={20} width={20} />
             <div className="leading-[20px] text-secondary-600 text-base font-normal">
               62632 (10 AM to 5 PM)
