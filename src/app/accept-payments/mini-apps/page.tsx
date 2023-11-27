@@ -3,7 +3,7 @@ import Button from '@/components/UI/Button/PrimaryButton';
 import Image from 'next/image';
 import miniAppsBG from '@/assets/images/mini-apps.jpg';
 import Info from '@/components/Content/Info/Info';
-import { cards } from '@/types/data';
+import { cards } from '@/utils/data';
 
 const MiniApps = () => {
   return (

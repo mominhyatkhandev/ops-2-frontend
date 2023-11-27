@@ -10,7 +10,7 @@ import web from '@/assets/icons/global.svg';
 import scanner from '@/assets/icons/scanning.svg';
 import cartIcon from '@/assets/icons/cartIcon.svg';
 import { TCard } from '@/types/static/static';
-import { cards } from '@/types/data';
+import { cards } from '@/utils/data';
 
 export default function Home() {
   // const cards: TCard[] = [

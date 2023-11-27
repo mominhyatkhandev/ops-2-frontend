@@ -3,7 +3,7 @@ import Button from '@/components/UI/Button/PrimaryButton';
 import Image from 'next/image';
 import qrPaymentBG from '@/assets/images/qr-payment.jpg';
 import Info from '@/components/Content/Info/Info';
-import { cards } from '@/types/data';
+import { cards } from '@/utils/data';
 
 const QRPayments = () => {
   return (
