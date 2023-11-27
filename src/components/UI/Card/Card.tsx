@@ -9,16 +9,7 @@ interface ICardProps {
   description?: string;
 }
 
-<<<<<<< Updated upstream
 const Card = ({ logo, label, description }: ICardProps) => {
-=======
-const Card = ({
-  logo,
-  label,
-  // children
-  description // className,
-}: ICardProps) => {
->>>>>>> Stashed changes
   return (
     <div
       className={`group relative border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white duration-300 ease-out`}
