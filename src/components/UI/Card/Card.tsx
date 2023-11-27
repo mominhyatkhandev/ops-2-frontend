@@ -9,21 +9,30 @@ interface ICardProps {
   description?: string;
 }
 
+<<<<<<< Updated upstream
 const Card = ({ logo, label, description }: ICardProps) => {
+=======
+const Card = ({
+  logo,
+  label,
+  // children
+  description // className,
+}: ICardProps) => {
+>>>>>>> Stashed changes
   return (
     <div
       className={`group relative border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white duration-300 ease-out`}
     >
-      <div className="w-[48px] h-[48px] flex items-center justify-center transition-opacity opacity-100 group-hover:opacity-0 absolute">
-        <Image src={logo.image1} alt={'image'} />
+      <div className="flex items-center justify-center transition-opacity opacity-100 group-hover:opacity-0 absolute">
+        <Image src={logo.image1} alt={'image'} height={32} width={32} />
       </div>
 
-      <div className="w-[48px] h-[48px]  items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 absolute">
+      <div className="items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 absolute">
         <Image
           src={logo.image2}
           alt={'image2'}
-          // width={32}
-          // height={32}
+          width={32}
+          height={32}
           // style={{ color: 'red', background: 'blue' }}
         />
       </div>
