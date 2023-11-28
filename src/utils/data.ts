@@ -1,14 +1,14 @@
 // import { TCard } from '@/types/static/static';
 import { TCard } from '@/types/static/static';
 // import OPJ from '@/assets/icons/opj.jpg';
-import OP1 from '@/assets/icons/online-payments-v1.png';
-import OP2 from '@/assets/icons/online-payments-v2.png';
-import QR1 from '@/assets/icons/qr-integrations-v1.png';
-import QR2 from '@/assets/icons/qr-integrations-v2.png';
-import PL1 from '@/assets/icons/payment-link-v1.png';
-import PL2 from '@/assets/icons/payment-link-v2.png';
-import MA1 from '@/assets/icons/mini-apps-v1.png';
-import MA2 from '@/assets/icons/mini-apps-v2.png';
+import OP1 from '@/assets/icons/online-payments-v1.svg';
+import OP2 from '@/assets/icons/online-payments-v2.svg';
+import QR1 from '@/assets/icons/qr-integrations-v1.svg';
+import QR2 from '@/assets/icons/qr-integrations-v2.svg';
+import PL1 from '@/assets/icons/payment-link-v1.svg';
+import PL2 from '@/assets/icons/payment-link-v2.svg';
+import MA1 from '@/assets/icons/mini-apps-v1.svg';
+import MA2 from '@/assets/icons/mini-apps-v2.svg';
 
 // import web from '@/assets/icons/global.svg';
 
