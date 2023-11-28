@@ -4,7 +4,7 @@ import Partners from '@/components/Content/Partners/Partners';
 import Image from 'next/image';
 import paymentLinkBG from '@/assets/images/payment-link.jpg';
 import Info from '@/components/Content/Info/Info';
-import { cards } from '@/types/data';
+import { cards } from '@/utils/data';
 
 const PaymentLink = () => {
   return (

@@ -39,11 +39,11 @@ const Partners = (): JSX.Element => {
             <span className="text-primary-base">online brands</span>
           </h1>
         </div>
-        <div className="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-5 ">
+        <div className="bg-warning-600 w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-5 ">
           {partnersImages.map((item, index) => (
             <div
               key={index}
-              className="py-9 px-5 flex items-center justify-center"
+              className="bg-primary-base py-9 px-5 flex items-center justify-center"
             >
               <Image
                 src={item}

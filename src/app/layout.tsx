@@ -4,7 +4,7 @@ import './globals.css';
 // import TanstackProvider from '@/providers/TanstackProvider'
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-import ReduxProvider from '@/providers/ReduxProvider';
+import ReduxProvider from '@/services/providers/ReduxProvider';
 
 // const inter = Inter({ subsets: ['latin'] })
 const inter = Inter({
