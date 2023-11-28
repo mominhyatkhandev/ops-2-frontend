@@ -15,7 +15,7 @@ const Navbar = () => {
     setClickTrigger(!clickTrigger);
   };
   return (
-    <div className=" h-[82px] flex items-center justify-between px-[190px] bg-neutral-white-base shadow-sm relative">
+    <div className=" h-[82px] flex items-center justify-between px-[150px] bg-neutral-white-base shadow-sm relative">
       <div className="flex items-center ">
         <Image src={Logo} width={173} height={36} alt="logo" className="" />
       </div>
@@ -31,12 +31,7 @@ const Navbar = () => {
           </Link>
           <div className="w-[1px] h-[10px] bg-border-dark"></div>
 
-          <AcceptPayments
-            // selectedNavItem={selectedNavItem}
-            // setSelectedOption={setSelectedNavItem}
-            other={other}
-            clickTrigger={clickTrigger}
-          />
+          <AcceptPayments other={other} clickTrigger={clickTrigger} />
 
           <div className="w-[1px] h-[10px] bg-border-dark"></div>
 

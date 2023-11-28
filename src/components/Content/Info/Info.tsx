@@ -87,10 +87,11 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         )}
 
-        <div className="px-[150px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="px-[150px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {cardsArray?.map((item, index) => {
             return (
-              <div key={index} className="px-5 py-6">
+              <div key={index} className="py-6">
+                {/* <div key={index} className="px-5 py-6"> */}
                 <Card
                   key={index}
                   logo={item.logo}

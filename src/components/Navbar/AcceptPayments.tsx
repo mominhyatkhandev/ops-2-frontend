@@ -14,7 +14,8 @@ const AcceptPayments = ({
   const [selectedOption, setSelectedOption] = useState<string>('');
 
   useEffect(() => {
-    if (other == 'Home' || other == 'Developer' || other == 'FAQS') {
+    if (other == 'Home' || other == 'Developer' || other == 'FAQs') {
+      console.log('other', other);
       setSelectedOption('');
     }
   }, [other, clickTrigger]);
@@ -39,7 +40,9 @@ const AcceptPayments = ({
         >
           <div
             className={`${
-              isHovered && `text-primary-base hover:transition duration-300`
+              isHovered
+                ? `text-primary-base flex flex-start hover:transition duration-300`
+                : `flex flex-start hover:transition duration-300 `
             }`}
           >
             Accept Payments
@@ -55,10 +58,6 @@ const AcceptPayments = ({
           <Dropdown
             isHovered={isHovered}
             setSelectedOption={setSelectedOption}
-            // setSelectedOption={option => {
-            //   setSelectedOptionLocal(option);
-            //   setSelectedOption(option);
-            // }}
           />
         </div>
       </li>
