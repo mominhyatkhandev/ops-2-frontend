@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const HeroBanner = (): JSX.Element => {
   return (
-    <main className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
+    <main className="flex items-center justify-start p-[150px] mb-[20px] h-[684px] relative">
       <Image
         src={heroBanner}
         alt="Hero Background"

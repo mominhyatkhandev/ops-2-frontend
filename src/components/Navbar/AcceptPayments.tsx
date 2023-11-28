@@ -40,7 +40,9 @@ const AcceptPayments = ({
         >
           <div
             className={`${
-              isHovered && `text-primary-base hover:transition duration-300`
+              isHovered
+                ? `text-primary-base flex flex-start hover:transition duration-300`
+                : `flex flex-start hover:transition duration-300 `
             }`}
           >
             Accept Payments
