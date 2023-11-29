@@ -14,7 +14,7 @@ const AcceptPayments = ({
   const [selectedOption, setSelectedOption] = useState<string>('');
 
   useEffect(() => {
-    if (other == 'Home' || other == 'Developer' || other == 'FAQs') {
+    if (other == 'Home' || other == 'Developer' || other == 'faq') {
       console.log('other', other);
       setSelectedOption('');
     }

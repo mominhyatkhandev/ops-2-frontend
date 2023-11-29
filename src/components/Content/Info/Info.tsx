@@ -9,10 +9,10 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-    <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center gap-12">
+    <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center py-24 px-[150px] gap-12">
       <div className="w-full gap-9 flex flex-col justify-center items-start">
         {title == 'payment gateway' ? (
-          <div className="px-[150px] flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-8">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
               <span className="text-primary-base">Payment Gateway</span>
@@ -23,7 +23,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </p>
           </div>
         ) : title === 'payment link' ? (
-          <div className="px-[150px] flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-8">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
@@ -36,7 +36,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title === 'qr payments' ? (
           <>
-            <div className="px-[150px] flex flex-col justify-center items-start gap-8">
+            <div className=" flex flex-col justify-center items-start gap-8">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />
@@ -49,7 +49,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </div>
           </>
         ) : title == 'subscription' ? (
-          <div className="px-[150px] flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-8">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
@@ -62,7 +62,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title == 'mini apps' ? (
           <>
-            <div className="px-[150px] flex flex-col justify-center items-start gap-8">
+            <div className=" flex flex-col justify-center items-start gap-8">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />
@@ -75,7 +75,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </div>
           </>
         ) : (
-          <div className="px-[150px] w-full flex flex-col justify-center items-center gap-8">
+          <div className=" w-full flex flex-col justify-center items-center gap-8">
             <h1 className="heading-primary">
               Designed for{' '}
               <span className="text-primary-base">Entrepreneurs</span>
@@ -87,7 +87,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         )}
 
-        <div className="px-[150px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {cardsArray?.map((item, index) => {
             return (
               <div key={index} className="py-6">

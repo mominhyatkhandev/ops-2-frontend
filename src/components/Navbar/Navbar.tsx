@@ -42,13 +42,14 @@ const Navbar = () => {
             Developer
           </div>
           <div className="w-[1px] h-[10px] bg-border-dark"></div>
-
-          <li
-            className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300"
-            onClick={() => handleOther('FAQs')}
-          >
-            FAQs
-          </li>
+          <Link href={`/faq`}>
+            <li
+              className="text-secondary-base text-sm cursor-pointer text-center px-2 hover:text-primary-base transition duration-300"
+              onClick={() => handleOther('faq')}
+            >
+              FAQs
+            </li>
+          </Link>
           <div className="w-[1px] h-[10px] bg-border-dark"></div>
           <div className="flex flex-row  gap-[24px]">
             <Button

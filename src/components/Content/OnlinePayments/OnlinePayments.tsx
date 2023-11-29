@@ -5,7 +5,7 @@ import onlinePayment from '../../../assets/images/onlinePayments.png';
 const OnlinePayments = (): JSX.Element => {
   return (
     <div id="NewRootRoot" className="flex flex-col w-full mb-[20px]">
-      <div className="bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-end shrink-0 items-end pr-40 py-24 relative">
+      <div className="min-h-[640px] bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-end shrink-0 items-end pr-40 py-24 relative">
         {/* <div className="bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-end min-h-[640px] shrink-0 items-end pr-40 py-24"> */}
 
         <Image

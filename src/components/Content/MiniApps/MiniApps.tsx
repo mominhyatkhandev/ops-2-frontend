@@ -6,7 +6,7 @@ const MiniApps = (): JSX.Element => {
   return (
     <div id="NewRootRoot" className="flex flex-col w-full mb-[20px]">
       {/* <div className="ma-bg bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-center min-h-[640px] shrink-0 items-center"> */}
-      <div className="flex flex-col justify-center shrink-0 items-center relative">
+      <div className="min-h-[640px] flex flex-col justify-center shrink-0 items-center relative">
         <Image
           src={miniApps}
           alt="miniApps Background"
