@@ -10,14 +10,14 @@ interface IInfoProp {
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
     <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center py-24 px-[150px] gap-12">
-      <div className="w-full gap-9 flex flex-col justify-center items-start">
+      <div className="w-full gap-8 text-base flex flex-col justify-center items-start">
         {title == 'payment gateway' ? (
           <div className=" flex flex-col justify-center items-start gap-8">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
               <span className="text-primary-base">Payment Gateway</span>
             </h1>
-            <p className="text-base font-normal">
+            <p className="text-base font-normal leading-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>

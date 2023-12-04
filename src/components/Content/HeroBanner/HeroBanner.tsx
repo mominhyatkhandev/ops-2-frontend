@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const HeroBanner = (): JSX.Element => {
   return (
-    <main className="flex items-center justify-start p-[150px] mb-[20px] h-[684px] relative">
+    <main className="flex items-center justify-start p-[150px] h-[684px] relative">
       <Image
         src={heroBanner}
         alt="Hero Background"
@@ -32,7 +32,10 @@ const HeroBanner = (): JSX.Element => {
           Introductory text, lorem ipsum, including QR, Online Payments and
           Mini-APPS
         </p>
-        <Button label="Sign up" className="button-primary" />
+        <Button
+          label="Sign up"
+          className="button-primary text-sm font-semibold"
+        />
       </div>
     </main>
   );

@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="flex items-center ">
         <Image src={Logo} width={173} height={36} alt="logo" className="" />
       </div>
-      <div className="flex flex-row  ">
+      <div className="flex flex-row ">
         <ul className="w-full lg:inline-flex items-center gap-[24px]">
           <Link href={'/'}>
             <li
@@ -54,11 +54,11 @@ const Navbar = () => {
           <div className="flex flex-row  gap-[24px]">
             <Button
               label="Login"
-              className=" border-primary-base font-semibold text-secondary-base py-[14px] px-[33px] gap-10 rounded-[8px] border-[1.5px] "
+              className=" border-primary-base text-xs font-semibold align-baseline text-secondary-base py-[14px] px-[33px] gap-10 rounded-[8px] border-[2px] "
             />
             <Button
               label="Sign up"
-              className=" bg-primary-base  font-semibold text-neutral-white-base py-[14px] px-[33px] gap-10 rounded-[8px] "
+              className=" bg-primary-base text-xs align-baseline font-semibold text-neutral-white-base py-[14px] px-[33px] gap-10 rounded-[8px] "
             />
           </div>
         </ul>

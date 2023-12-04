@@ -1,5 +1,6 @@
+'use client';
 import Image, { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ICardProps {
   label: string;
@@ -10,27 +11,51 @@ interface ICardProps {
 }
 
 const Card = ({ logo, label, description }: ICardProps) => {
+  const [isCardHovered, setIsCardHovered] = useState(false);
   return (
     <div
-      className={`group relative border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white duration-300 ease-out`}
+      className={`group border-solid h-[300px] border-border-light bg-screen-grey flex flex-col items-start justify-center py-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white duration-300 ease-out`}
+      onMouseEnter={() => setIsCardHovered(true)}
+      onMouseLeave={() => setIsCardHovered(false)}
     >
-      <div className="flex items-center justify-center transition-opacity opacity-100 group-hover:opacity-0 absolute">
-        <Image src={logo.image1} alt={'image'} height={32} width={32} />
-      </div>
-
-      <div className="items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 absolute">
-        <Image
-          src={logo.image2}
-          alt={'image2'}
-          width={32}
-          height={32}
-          // style={{ color: 'red', background: 'blue' }}
-        />
-      </div>
+      {isCardHovered ? (
+        <div className="">
+          <Image src={logo.image2} alt={'image2'} width={48} height={48} />
+        </div>
+      ) : (
+        <div className="">
+          <Image src={logo.image1} alt={'image'} height={48} width={48} />
+        </div>
+      )}
 
       <div className="self-stretch flex flex-col gap-[24px] items-start mt-[60px] ">
-        <div className="text-lg font-semibold leading-[32px] w-full group-hover:text-white">
-          {label}
+        <div className="text-2xl font-semibold w-full group-hover:text-white">
+          {/* {label} */}
+          <>
+            {label == 'Online Payments' ? (
+              <>
+                Online <br></br>
+                Payments
+              </>
+            ) : label == 'QR Integration' ? (
+              <>
+                QR <br></br>
+                Integration
+              </>
+            ) : label == 'Mini APPS' ? (
+              <>
+                Mini <br></br>
+                Apps
+              </>
+            ) : label == 'Payment Link' ? (
+              <>
+                Payment <br></br>
+                Link
+              </>
+            ) : (
+              <>{label}</>
+            )}
+          </>
         </div>
         <div className="leading-[20px] text-secondary-600 group-hover:text-white text-base w-full">
           {description}
