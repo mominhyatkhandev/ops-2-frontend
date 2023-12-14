@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import ReduxProvider from '@/services/providers/ReduxProvider';
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 
 // const inter = Inter({ subsets: ['latin'] })
 const inter = Inter({

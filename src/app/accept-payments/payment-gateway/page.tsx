@@ -8,38 +8,46 @@ import { cards } from '@/utils/data';
 
 const PaymentGateway = () => {
   return (
-    <>
-      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
-      <div className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
+    <div className="flex flex-col">
+      <div className="flex items-center justify-start p-[150px] min-h-[660px] relative">
         <Image
           src={paymentGatewayBG}
           alt="paymentGateway Background"
           layout="fill"
           objectFit="cover"
-          quality={100}
           className="absolute inset-0"
         />
-        <div className="flex w-[680px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
-          <p className="heading-primary">
-            <span className="text-primary-base">
-              {' '}
-              Trusted Payment Technology
-            </span>{' '}
-            by Pakistan’s leading businesses & entrepreneurs
-          </p>
-          <p className="text-secondary-base text-dark text-base font-normal w-[800px] leading-[20px]">
-            Grow your business with Payment Gateway that powers Pakistan’s
-            largest brands and even through easypaisa app authorization.
-          </p>
-          <Button label="Sign up" className="button-primary" />
+        <div className="flex flex-col justify-center items-start gap-9 rounded-lg relative">
+          <div className="flex flex-col gap-4">
+            <p className="heading-primary">
+              <span className="text-primary-base">
+                Trusted Payment Technology
+              </span>
+              <br></br>
+              <span>by Pakistan’s leading</span>
+              <br></br>
+              <span>businesses & entrepreneurs</span>
+            </p>
+            <p className="text-secondary-base text-dark text-base font-normal leading-tight">
+              <span>
+                Grow your business with Payment Gateway that powers Pakistan’s
+                largest brands and even through
+              </span>{' '}
+              <br></br>
+              <span>easypaisa app authorization.</span>
+            </p>
+          </div>
+          <Button
+            label="Sign up"
+            className="button-primary w-[200px] px-3 py-[19px]"
+          />
         </div>
-        {/* <Info /> */}
       </div>
-      {/* <div className="flex px-[200px]"> */}
-      <Info title={'payment gateway'} cardsArray={cards} />
-      {/* </div> */}
-      <Partners />
-    </>
+      <div className="flex flex-col pb-[120px]">
+        <Info title={'payment gateway'} cardsArray={cards} />
+        <Partners />
+      </div>
+    </div>
   );
 };
 

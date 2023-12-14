@@ -1,16 +1,17 @@
-import Navbar from '@/components/Navbar/Navbar';
+'use client';
 import Header from '@/components/Content/HeroBanner/HeroBanner';
 import Info from '@/components/Content/Info/Info';
 import OnlinePayments from '@/components/Content/OnlinePayments/OnlinePayments';
 import QRPayments from '@/components/Content/QRPayments/QRPayments';
 import PaymentLink from '@/components/Content/Paymentlink/PaymentLink';
 import MiniApps from '@/components/Content/MiniApps/MiniApps';
-import Footer from '@/components/Footer/Footer';
 import web from '@/assets/icons/global.svg';
 import scanner from '@/assets/icons/scanning.svg';
 import cartIcon from '@/assets/icons/cartIcon.svg';
 import { TCard } from '@/types/static/static';
 import { cards } from '@/utils/data';
+import { useState } from 'react';
+import CustomModal from '@/components/UI/Modal/CustomModal';
 
 export default function Home() {
   // const cards: TCard[] = [
@@ -39,16 +40,17 @@ export default function Home() {
   //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
   //   }
   // ];
+
   return (
-    <main className="">
-      {/* <Navbar /> */}
+    <main>
       <Header />
       <Info cardsArray={cards} />
-      <OnlinePayments />
-      <QRPayments />
-      <MiniApps />
-      <PaymentLink />
-      {/* <Footer /> */}
+      <div className="flex flex-col gap-5 pb-[93px]">
+        <OnlinePayments />
+        <QRPayments />
+        <MiniApps />
+        <PaymentLink />
+      </div>
     </main>
   );
 }

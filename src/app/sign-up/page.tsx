@@ -1,9 +1,10 @@
 // components/SignUpForm.js
+'use client';
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-const SignUpForm = () => {
+const SignUpForm = ({ onSubmit }: any) => {
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -24,19 +25,15 @@ const SignUpForm = () => {
       .required('Confirm Password is required')
   });
 
-  const handleSubmit = (values: any) => {
-    // Handle form submission logic here
-    console.log('Form submitted with values:', values);
-  };
-
   return (
-    <>
+    <div className="flex flex-col items-center justify-center bg-neutral-white-base p-3">
+      <div className="text-5xl text-primary-base font-semibold">Sign Up</div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
       >
-        <Form className="max-w-md mx-auto mt-8 space-y-4">
+        <Form className="max-w-md mx-auto mt-8 space-y-4 py-6 px-10 shadow-lg">
           <div>
             <label
               htmlFor="firstName"
@@ -54,7 +51,7 @@ const SignUpForm = () => {
             <ErrorMessage
               name="firstName"
               component="div"
-              className="text-red-500 text-sm"
+              className="text-error-400 text-sm"
             />
           </div>
 
@@ -117,7 +114,7 @@ const SignUpForm = () => {
             <ErrorMessage
               name="password"
               component="div"
-              className="text-red-500 text-sm"
+              className="text-danger-600 text-sm"
             />
           </div>
 
@@ -138,19 +135,19 @@ const SignUpForm = () => {
             <ErrorMessage
               name="confirmPassword"
               component="div"
-              className="text-red-500 text-sm"
+              className="text-danger-600 text-sm"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
+            className="bg-primary-base text-xs font-semibold w-full text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
           >
             Sign Up
           </button>
         </Form>
       </Formik>
-    </>
+    </div>
   );
 };
 

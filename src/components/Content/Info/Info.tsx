@@ -9,21 +9,21 @@ interface IInfoProp {
 
 const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
   return (
-    <div className="min-h-[640px] w-full inline-flex flex-col justify-center items-center py-24 px-[150px] gap-12">
-      <div className="w-full gap-8 text-base flex flex-col justify-center items-start">
+    <div className="w-full inline-flex flex-col justify-center items-start px-[150px] pt-[80px] pb-[120px]">
+      <div className="w-full gap-9 text-base flex flex-col justify-center items-start">
         {title == 'payment gateway' ? (
-          <div className=" flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-2">
             <h1 className="heading-primary">
               6 powerful reasons to chose Easypaisa <br />
               <span className="text-primary-base">Payment Gateway</span>
             </h1>
-            <p className="text-base font-normal leading-5">
+            <p className="text-base font-normal leading-tight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
           </div>
         ) : title === 'payment link' ? (
-          <div className=" flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-2">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
@@ -36,7 +36,7 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
           </div>
         ) : title === 'qr payments' ? (
           <>
-            <div className=" flex flex-col justify-center items-start gap-8">
+            <div className=" flex flex-col justify-center items-start gap-2">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />
@@ -49,56 +49,53 @@ const Info = ({ title, cardsArray }: IInfoProp): JSX.Element => {
             </div>
           </>
         ) : title == 'subscription' ? (
-          <div className=" flex flex-col justify-center items-start gap-8">
+          <div className=" flex flex-col justify-center items-start gap-2">
             <h1 className="heading-primary">
               Get Registered, start accepting payments.
               <br />
               <span className="text-primary-base">It’s that simple!</span>
             </h1>
-            <p className="text-base font-normal">
+            <p className="text-base leading-tight font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
           </div>
         ) : title == 'mini apps' ? (
           <>
-            <div className=" flex flex-col justify-center items-start gap-8">
+            <div className=" flex flex-col justify-center items-start gap-2">
               <h1 className="heading-primary">
                 Get Registered, start accepting payments.
                 <br />
                 <span className="text-primary-base">It’s that simple!</span>
               </h1>
-              <p className="text-base font-normal">
+              <p className="text-base leading-tight font-normal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmodtempor incididunt ut labore et dolore
               </p>
             </div>
           </>
         ) : (
-          <div className=" w-full flex flex-col justify-center items-center gap-8">
+          <div className=" flex flex-col justify-center items-start gap-2 ">
             <h1 className="heading-primary">
               Designed for{' '}
               <span className="text-primary-base">Entrepreneurs</span>
             </h1>
-            <p className="text-base font-normal">
+            <p className="text-base leading-tight font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmodtempor incididunt ut labore et dolore
             </p>
           </div>
         )}
 
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
           {cardsArray?.map((item, index) => {
             return (
-              <div key={index} className="py-6">
-                {/* <div key={index} className="px-5 py-6"> */}
-                <Card
-                  key={index}
-                  logo={item.logo}
-                  label={item.label}
-                  description={item.description}
-                />
-              </div>
+              <Card
+                key={index}
+                logo={item.logo}
+                label={item.label}
+                description={item.description}
+              />
             );
           })}
         </div>

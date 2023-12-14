@@ -32,7 +32,7 @@ const Partners = (): JSX.Element => {
 
   return (
     <>
-      <div className="min-h-[640px] px-[150px] w-full inline-flex flex-col items-center justify-center mb-[20px] gap-12">
+      <div className="px-[150px] w-full inline-flex flex-col items-center justify-center gap-9">
         <div className="gap-9 flex justify-center items-center flex-col">
           <h1 className="text-5xl text-center font-semibold">
             We power Pakistan’s biggest{' '}

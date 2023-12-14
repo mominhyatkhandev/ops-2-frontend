@@ -10,7 +10,7 @@ interface IButton {
 const Button = ({ label, onClickHandler = () => {}, className }: IButton) => {
   return (
     <button className={`${className}`} onClick={onClickHandler}>
-      {label}
+      <div className="w-full">{label}</div>
     </button>
   );
 };
