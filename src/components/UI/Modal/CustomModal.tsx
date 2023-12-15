@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Modal from 'react-modal';
-import SignUpForm from '@/app/sign-up/page';
+import SignUpForm from '@/app/sign-up/page2';
 
 interface CustomModalProps {
   isOpen: boolean;

@@ -1,154 +1,120 @@
-// components/SignUpForm.js
-'use client';
+import Button from '@/components/UI/Button/PrimaryButton';
+import InputPrimary from '@/components/UI/Inputs/InputPrimary';
 import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 
-const SignUpForm = ({ onSubmit }: any) => {
-  const initialValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  };
-
-  const validationSchema = Yup.object().shape({
-    firstName: Yup.string().required('First Name is required'),
-    lastName: Yup.string().required('Last Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string()
-      .min(6, 'Password must be at least 6 characters')
-      .required('Password is required'),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), ''], 'Passwords must match')
-      .required('Confirm Password is required')
-  });
-
+const page = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-neutral-white-base p-3">
-      <div className="text-5xl text-primary-base font-semibold">Sign Up</div>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={onSubmit}
+    <>
+      <div
+        id="SignupAccountOptionsRoot"
+        className="bg-neutral-white-base flex flex-col pb-[124px]"
       >
-        <Form className="max-w-md mx-auto mt-8 space-y-4 py-6 px-10 shadow-lg">
-          <div>
-            <label
-              htmlFor="firstName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
-            <Field
-              type="text"
-              id="firstName"
-              name="firstName"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your first name"
-            />
-            <ErrorMessage
-              name="firstName"
-              component="div"
-              className="text-error-400 text-sm"
-            />
+        <div className="flex flex-col px-[150px] pt-[76px] gap-6 items-start">
+          <div className="flex flex-col gap-2 items-start">
+            <div className="text-5xl font-semibold leading-tight text-[#322c3c]">
+              What would you like to Sign up for?
+            </div>
+            <div className=" leading-tight text-[#5b5663]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmodtempor incididunt ut labore et dolore
+            </div>
           </div>
-
-          <div>
-            <label
-              htmlFor="lastName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-            <Field
-              type="text"
-              id="lastName"
-              name="lastName"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your last name"
+          <div className="border-solid border-border-light bg-screen-grey flex flex-col justify-center px-[290px] py-[60px] gap-8 w-full items-center rounded-lg">
+            <div className="w-full flex flex-col justify-between gap-4 items-start">
+              <div className=" font-semibold leading-tight text-[#322c3c]">
+                Please Select One Option
+              </div>
+              <div
+                id="InputField"
+                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
+              >
+                <div className="flex flex-row gap-4 w-full items-start">
+                  <img
+                    src="https://file.rendit.io/n/vXZZAAi6JI9o5pNo67W9.svg"
+                    alt="Vuesaxlinearglobal"
+                    id="Vuesaxlinearglobal"
+                    className="w-6"
+                  />
+                  <div
+                    id="InputHeading"
+                    className="text-sm w-full font-medium leading-tight text-[#322c3c] mt-1"
+                  >
+                    Online Payments
+                  </div>
+                </div>
+                <div
+                  id="Ellipse"
+                  className="bg-[url(https://file.rendit.io/n/oJT5KXretMLunELLSXjO.svg)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-row w-6 h-6 items-start pt-2 px-2"
+                >
+                  <img
+                    src="https://file.rendit.io/n/q4Qk176WFSLiMD90E9hs.svg"
+                    alt="Group"
+                    className="w-2"
+                  />
+                </div>
+              </div>
+              <div
+                id="InputField1"
+                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
+              >
+                <div className="flex flex-row gap-4 w-full items-start">
+                  <img
+                    src="https://file.rendit.io/n/v8u5idxKRGuj9g39CRVz.svg"
+                    alt="Vuesaxlinearscanning"
+                    id="Vuesaxlinearscanning"
+                    className="w-6"
+                  />
+                  <div
+                    id="InputHeading1"
+                    className="text-sm  font-medium leading-tight text-[#322c3c] mt-1"
+                  >
+                    QR Payments
+                  </div>
+                </div>
+                <img
+                  src="https://file.rendit.io/n/2de4wvF0uOrZyBF4WFNh.svg"
+                  alt="IconCheckbox1"
+                  id="IconCheckbox1"
+                  className="w-6"
+                />
+              </div>
+              <div
+                id="InputField2"
+                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
+              >
+                <div className="flex flex-row gap-4 w-full items-start">
+                  <img
+                    src="https://file.rendit.io/n/JVFthuBWFIsCMvJFGu4A.svg"
+                    alt="IconInputfield2"
+                    id="IconInputfield2"
+                    className="w-6"
+                  />
+                  <div
+                    id="InputHeading2"
+                    className="text-sm  font-medium leading-tight text-[#322c3c] mt-1"
+                  >
+                    Mini Apps
+                  </div>
+                </div>
+                <img
+                  src="https://file.rendit.io/n/2de4wvF0uOrZyBF4WFNh.svg"
+                  alt="IconCheckbox2"
+                  id="IconCheckbox2"
+                  className="w-6"
+                />
+              </div>
+            </div>
+            <Button
+              label="Next"
+              className="button-primary w-[270px] text-sm px-3 py-[19px]"
             />
-            <ErrorMessage
-              name="lastName"
-              component="div"
-              className="text-red-500 text-sm"
-            />
+            {/* <InputPrimary label="Username" type="text" /> */}
           </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <Field
-              type="email"
-              id="email"
-              name="email"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your email"
-            />
-            <ErrorMessage
-              name="email"
-              component="div"
-              className="text-red-500 text-sm"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-            <Field
-              type="password"
-              id="password"
-              name="password"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your password"
-            />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className="text-danger-600 text-sm"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="confirmPassword"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Confirm Password
-            </label>
-            <Field
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Confirm your password"
-            />
-            <ErrorMessage
-              name="confirmPassword"
-              component="div"
-              className="text-danger-600 text-sm"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bg-primary-base text-xs font-semibold w-full text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
-          >
-            Sign Up
-          </button>
-        </Form>
-      </Formik>
-    </div>
+        </div>
+      </div>
+      ;
+    </>
   );
 };
 
-export default SignUpForm;
+export default page;
