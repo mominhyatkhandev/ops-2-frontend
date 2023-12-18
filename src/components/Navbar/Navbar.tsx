@@ -15,7 +15,7 @@ const Navbar = () => {
     setClickTrigger(!clickTrigger);
   };
   return (
-    <div className=" h-[82px] flex items-center justify-between px-[150px] bg-neutral-white-base shadow-sm relative">
+    <nav className=" h-[82px] flex items-center justify-between px-[150px] bg-neutral-white-base  relative shadow-md z-10">
       <div className="flex items-center ">
         <Image src={Logo} width={173} height={36} alt="logo" className="" />
       </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
         </ul>
       </div>
       {/* </div> */}
-    </div>
+    </nav>
   );
 };
 

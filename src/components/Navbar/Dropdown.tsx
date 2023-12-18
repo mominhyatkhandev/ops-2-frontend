@@ -1,13 +1,15 @@
-'use client';
+// Dropdown.tsx
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Coin from '../../assets/icons/card-coin.svg';
 import Scanner from '../../assets/icons/scanner-nav.svg';
 import Shop from '../../assets/icons/shop-nav.svg';
 import Money from '../../assets/icons/money-nav.svg';
 import LinkIcon from '../../assets/icons/link-angled-nav.svg';
-import Link from 'next/link';
+import SubscriptionIcon from '@/assets/icons/subscription-icon.svg';
+import { usePathname } from 'next/navigation';
 
 interface IDropdownProps {
   isHovered: boolean;
@@ -15,13 +17,16 @@ interface IDropdownProps {
 }
 
 const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
+  const router = usePathname();
+
   const dropDownList = [
     { title: 'Payment Gateway', link: 'payment-gateway', icon: Coin },
-    { title: 'QR Payments', link: 'qr-payment', icon: Scanner },
+    { title: 'QR Payments', link: 'qr-payments', icon: Scanner },
     { title: 'Mini Apps', link: 'mini-apps', icon: Shop },
     { title: 'Payment Link', link: 'payment-link', icon: Money },
-    { title: 'Subscription', link: 'subscription', icon: LinkIcon }
+    { title: 'Subscription', link: 'subscription', icon: SubscriptionIcon }
   ];
+
   return (
     <>
       {isHovered && (
@@ -31,7 +36,11 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
               <div
                 key={index}
                 onClick={() => setSelectedOption(item.title)}
-                className="flex flex-row gap-4 items-start hover:text-primary-base hover:transition duration-300"
+                className={`flex flex-row gap-4 items-start hover:text-primary-base hover:transition duration-300 ${
+                  router === `/accept-payments/${item.link}`
+                    ? 'text-primary-base'
+                    : ''
+                }`}
               >
                 <Image src={item.icon} width={24} height={24} alt="coin" />
                 <span>{item.title}</span>
@@ -45,33 +54,3 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
 };
 
 export default Dropdown;
-
-{
-  /* //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base hover:transition duration-300">
-        //         <Image src={Scanner} width={24} height={24} alt="coin" />
-        //         <span>QR Payments</span>
-        //       </div>
-        //     </Link>
-        //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
-        //         <Image src={Shop} width={24} height={24} alt="coin" />
-        //         <span>Mini Apps</span>
-        //       </div>
-        //     </Link>
-        //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
-        //         <Image src={Money} width={24} height={24} alt="coin" />
-        //         <span>Payment Link</span>
-        //       </div>
-        //     </Link>
-        //     <Link href="/">
-        //       <div className="flex flex-row gap-[16px] items-start hover:text-primary-base">
-        //         <Image src={LinkIcon} width={24} height={24} alt="coin" />
-        //         <span>Subscription</span>
-        //       </div>
-        //     </Link>
-        //     {/* Add more menu items as needed */
-}
-//   </div>
-// )} */}

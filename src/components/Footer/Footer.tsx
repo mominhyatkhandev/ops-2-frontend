@@ -6,7 +6,7 @@ import emailIcon from '@/assets/images/emailIcon.png';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center w-full min-h-[350px] gap-[60px] items-center px-20 py-20">
+    <footer className="flex flex-col justify-center w-full min-h-[350px] gap-[60px] items-center px-20 py-20">
       <div className="bg-border-light h-[1px] w-full"></div>
       <div className="w-full flex justify-between">
         <div className="flex flex-col gap-[60px] min-h-[107px] items-start">
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
