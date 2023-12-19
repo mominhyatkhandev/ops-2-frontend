@@ -1,147 +1,95 @@
-// components/SignUpForm.js
-'use client';
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 import InputPrimary from '@/components/UI/Inputs/InputPrimary';
+import Input from '@/components/UI/Inputs/Input';
+import { signUpInitialValues, signUpSchema } from '@/validations/signUpSchema';
+import Button from '@/components/UI/Button/PrimaryButton';
 
 const SignUpForm = ({ onSubmit }: any) => {
-  const initialValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  };
-
-  const validationSchema = Yup.object().shape({
-    firstName: Yup.string().required('First Name is required'),
-    lastName: Yup.string().required('Last Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string()
-      .min(6, 'Password must be at least 6 characters')
-      .required('Password is required'),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), ''], 'Passwords must match')
-      .required('Confirm Password is required')
-  });
-
   return (
     <div className="flex flex-col items-center justify-center bg-neutral-white-base p-3">
       <div className="text-5xl text-primary-base font-semibold">Sign Up</div>
       <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
+        initialValues={signUpInitialValues}
+        validationSchema={signUpSchema}
         onSubmit={onSubmit}
       >
-        <Form className="max-w-md mx-auto mt-8 space-y-4 py-6 px-10 shadow-lg">
-          <div>
-            <label
-              htmlFor="firstName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
-            <Field
+        {formik => (
+          <Form className="max-w-md mx-auto mt-8 space-y-4 py-6 px-10 shadow-lg">
+            <Input
+              label="First Name"
+              name="firstName"
               type="text"
-              id="firstName"
-              name="firstName"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your first name"
+              error={formik.errors.firstName}
+              touched={formik.touched.firstName}
             />
-            <ErrorMessage
-              name="firstName"
-              component="div"
-              className="text-error-400 text-sm"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="lastName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-            <InputPrimary label="Username" type="text" />
-
-            <ErrorMessage
+            <Input
+              label="Last Name"
               name="lastName"
-              component="div"
-              className="text-red-500 text-sm"
+              type="text"
+              error={formik.errors.lastName}
+              touched={formik.touched.lastName}
             />
-          </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <Field
+            <Input
+              label="Merchant Name"
+              name="merchantName"
+              type="text"
+              error={formik.errors.merchantName}
+              touched={formik.touched.merchantName}
+            />
+            <Input
+              label="Mobile Number"
+              name="phoneNumber"
+              type="text"
+              error={formik.errors.phoneNumber}
+              touched={formik.touched.phoneNumber}
+            />
+            <Input
+              label="Email"
+              name="email"
               type="email"
-              id="email"
-              name="email"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your email"
+              error={formik.errors.email}
+              touched={formik.touched.email}
             />
-            <ErrorMessage
-              name="email"
-              component="div"
-              className="text-red-500 text-sm"
+            <Input
+              label="Website"
+              name="website"
+              type="text"
+              error={formik.errors.website}
+              touched={formik.touched.website}
             />
-          </div>
-
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-            <Field
-              type="password"
-              id="password"
+            <Input
+              label="Password"
               name="password"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Enter your password"
-            />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className="text-danger-600 text-sm"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="confirmPassword"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Confirm Password
-            </label>
-            <Field
               type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              className="mt-1 p-2 w-full border rounded-md"
-              placeholder="Confirm your password"
+              error={formik.errors.password}
+              touched={formik.touched.password}
             />
-            <ErrorMessage
+            <Input
+              label="Confirm Password"
               name="confirmPassword"
-              component="div"
-              className="text-danger-600 text-sm"
+              type="password"
+              error={formik.errors.confirmPassword}
+              touched={formik.touched.confirmPassword}
             />
-          </div>
 
-          <button
-            type="submit"
-            className="bg-primary-base text-xs font-semibold w-full text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
-          >
-            Sign Up
-          </button>
-        </Form>
+            {/* <button
+              type="submit"
+              disabled={!formik.isValid}
+              className={`${
+                !formik.isValid ? 'bg-neutral-black-300' : 'bg-primary-base'
+              } text-sm leading-tight font-semibold w-full text-neutral-white-base p-2 rounded-md hover:bg-blue-600 transition duration-300`}
+            >
+              Sign Up
+            </button> */}
+            <Button
+              label="Sign up"
+              type="submit"
+              isDisabled={!formik.isValid}
+              className={`button-primary w-full py-[19px] px-4 text-sm leading-tight transition duration-300`}
+            />
+          </Form>
+        )}
       </Formik>
     </div>
   );

@@ -7,10 +7,10 @@
     color: #fff; /* Set your desired text color */
   }
   .button-primary {
-    @apply bg-primary-base flex justify-center items-center text-neutral-white-base font-semibold rounded-lg;
+    @apply flex justify-center items-center text-neutral-white-base font-semibold rounded-lg;
   }
   .button-secondary {
-    @apply border-primary-base border-[2px] flex justify-center items-center text-secondary-base font-semibold rounded-lg;
+    @apply border-primary-base bg-neutral-white-base border-[2px] flex justify-center items-center text-secondary-base font-semibold rounded-lg;
   }
   .heading-primary {
     @apply font-semibold text-5xl text-secondary-base leading-tight;

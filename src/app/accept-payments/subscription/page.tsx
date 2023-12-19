@@ -35,7 +35,7 @@ const Subscription = () => {
             </div>
             <Button
               label="Sign up"
-              className="button-primary w-[200px] px-3 py-[19px]"
+              className="button-primary w-[200px] px-3 py-[19px] text-sm leading-tight"
             />
           </div>
         </div>
