@@ -11,6 +11,7 @@ function test() {
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
     // setSelectedOption(option === selectedOption ? null : option);
+    console.log('selected', selectedOption);
   };
   return (
     <div>

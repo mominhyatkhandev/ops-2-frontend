@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import LoginBg from '@/assets/images/login-bg.jpg';
-import InputPrimary from '@/components/UI/Inputs/InputPrimary';
+import Input from '@/components/UI/Inputs/Input';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Link from 'next/link';
 
@@ -21,19 +21,25 @@ const Login = () => {
             Login to your account
           </span>
           <div className="flex flex-col gap-6">
-            <InputPrimary
+            <Input
+              name={'username'}
               label="Username or email"
               type="kmska"
               className="knak"
-              hasImage={false}
+              error={'xyz'}
+              touched={false}
+              // hasImage={false}
               isDisabled={false}
             />
-            <InputPrimary
+            <Input
+              name={'password'}
               label="Password"
-              type="kmska"
+              type="password"
               className="knak"
-              hasImage={false}
+              // hasImage={false}
               isDisabled={false}
+              error={'xyz'}
+              touched={false}
             />
           </div>
           <div className="flex justify-center pt-8 pb-6">

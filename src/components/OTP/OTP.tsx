@@ -34,14 +34,12 @@ function OTP({ numberOfDigits = 6 }: { numberOfDigits?: number }) {
   }
 
   return (
-    <article className="w-1/2">
-      <p className="text-2xl font-medium text-white mt-12">
-        OTP Input With Validation
+    <article className="flex flex-col w-full gap-4">
+      <p className="text-base text-secondary-base font-semibold">
+        Enter Email OTP here
       </p>
 
-      <p className="text-base text-white mt-6 mb-4">One Time Password (OTP)</p>
-
-      <div className="bg-primary-700 flex items-center gap-4 text-lg text-danger-base">
+      <div className="flex w-max items-center gap-9 text-lg text-secondary-900">
         {otp.map((digit, index) => (
           <input
             key={index}
@@ -50,14 +48,21 @@ function OTP({ numberOfDigits = 6 }: { numberOfDigits?: number }) {
             onChange={e => handleChange(e.target.value, index)}
             onKeyUp={e => handleBackspaceAndEnter(e, index)}
             ref={ref => (otpBoxReference.current[index] = ref!)}
-            className={`border w-12 h-12 text-2xl text-blue p-3 rounded-md block bg-black focus:border-2 focus:outline-none appearance-none text-center`}
+            className={`border-[1px] border-border-light w-[60px] h-[60px] text-2xl text-blue p-3 rounded-md block bg-black focus:border-2 focus:outline-none appearance-none text-center`}
           />
         ))}
       </div>
+      {otpError ? (
+        <p
+          className={`text-lg text-white mt-4 ${otpError ? 'error-show' : ''}`}
+        >
+          {otpError}
+        </p>
+      ) : null}
 
-      <p className={`text-lg text-white mt-4 ${otpError ? 'error-show' : ''}`}>
-        {otpError}
-      </p>
+      <div className="text-xs font-normal text-secondary-600">
+        Resend otp in MM:SS
+      </div>
     </article>
   );
 }
