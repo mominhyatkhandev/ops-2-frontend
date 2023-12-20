@@ -7,10 +7,13 @@
     color: #fff; /* Set your desired text color */
   }
   .button-primary {
-    @apply w-[200px] py-[19px] px-[10px] min-h-[48px] bg-primary-base text-white rounded-[8px];
+    @apply bg-primary-base flex justify-center items-center text-neutral-white-base font-semibold rounded-lg;
+  }
+  .button-secondary {
+    @apply border-primary-base border-[2px] flex justify-center items-center text-secondary-base font-semibold rounded-lg;
   }
   .heading-primary {
-    @apply font-semibold text-5xl text-secondary-base leading-[60px];
+    @apply font-semibold text-5xl text-secondary-base leading-tight;
   }
   /* .card-container {
     @apply transition duration-300 border-solid border-border-light bg-screen-grey flex flex-col gap-[60px] items-start pt-8 pb-6 px-5 border-[0.5px] rounded-[8px] cursor-pointer hover:bg-primary-base hover:text-white;
@@ -24,3 +27,8 @@
 }
 
 /* py-[14px] px-[10px] gap-10 rounded-[8px] */
+
+* {
+  /* background: #000; */
+  /* line-height: 50rem; */
+}

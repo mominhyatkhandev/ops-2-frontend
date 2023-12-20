@@ -26,14 +26,14 @@ export const cards: TCard[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
   },
   {
-    label: 'Payment Link',
-    logo: { image1: PL1, image2: PL2 },
+    label: 'Mini APPS',
+    logo: { image1: MA1, image2: MA2 },
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
   },
   {
-    label: 'Mini APPS',
-    logo: { image1: MA1, image2: MA2 },
+    label: 'Payment Link',
+    logo: { image1: PL1, image2: PL2 },
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d  eiusmodtempor incididunt ut labore et dolore'
   }

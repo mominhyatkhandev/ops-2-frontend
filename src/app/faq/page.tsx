@@ -48,96 +48,118 @@ const FAQ = () => {
     setActiveQuestion(prevIndex => (prevIndex === index ? null : index));
   };
   return (
-    <div className="flex flex-col gap-20 justify-center items-center">
+    <div className="flex flex-col pb-[120px] gap-20 justify-center items-center">
       <div
         id="NewRootRoot"
-        className="flex flex-col w-full items-start h-min-screen gap-40"
+        className="flex flex-col w-full items-start justify-between"
       >
-        <div className="bg-screen-grey flex flex-col justify-end w-full h-[313px] items-start">
-          <div className="flex flex-col px-[150px] gap-12 items-start">
-            <div className="flex flex-col w-full items-start">
-              <div className="text-5xl font-semibold leading-[60px] text-secondary-base">
-                How can we help you?
-              </div>
+        <div className="bg-screen-grey flex flex-col justify-end w-full items-start">
+          {/* <div className="flex flex-col gap-12 pb-[120px] items-start"> */}
+          <div className="flex flex-col px-[150px] pt-[120px] w-full justify-end items-start gap-8">
+            <div className="text-5xl font-semibold leading-tight text-secondary-base">
+              How can we help you?
             </div>
-            <div className="flex flex-row w-full items-start gap-9">
+            <div className="flex flex-row w-full items-center gap-8">
               <div
-                className={`font-500 leading-[20px] cursor-pointer pb-4 ${
-                  activeTab === 'Online payment gateway' &&
-                  'text-primary-base border-primary-base border-b-2'
-                }`}
+                className={`flex gap-9 items-center justify-center font-500 leading-tight cursor-pointer`}
                 onClick={() => setActiveTab('Online payment gateway')}
               >
-                Online payment gateway
+                <div className="flex items-start justify-center gap-9">
+                  <span
+                    className={`pb-2 flex items-center justify-center ${
+                      activeTab === 'Online payment gateway'
+                        ? 'text-primary-base border-primary-base border-b-2'
+                        : 'text-secondary-base'
+                    }`}
+                  >
+                    Online payments gateway
+                  </span>
+                  <div className="w-[1px] h-[10px] mt-[5px] bg-border-dark"></div>
+                </div>
               </div>
-              <div className="w-[1px] h-[15px] bg-border-dark"></div>
               <div
-                className={`font-500 leading-[20px] cursor-pointer pb-4 ${
-                  activeTab === 'QR payments' &&
-                  'text-primary-base border-primary-base border-b-2'
-                }`}
+                className={`flex items-start flex-col justify-start gap-9 font-500 leading-tight cursor-pointer  `}
                 onClick={() => setActiveTab('QR payments')}
               >
-                QR payments
+                <div className="flex items-start justify-center gap-9">
+                  <span
+                    className={`pb-2 flex items-center justify-center ${
+                      activeTab === 'QR payments'
+                        ? 'text-primary-base border-primary-base border-b-2'
+                        : 'text-secondary-base'
+                    }`}
+                  >
+                    QR payments
+                  </span>
+                  <div className="w-[1px] h-[10px] mt-[5px] bg-border-dark"></div>
+                </div>
               </div>
-              <div className="w-[1px] h-[15px] bg-border-dark"></div>
 
               <div
-                className={`font-500 leading-[20px] cursor-pointer pb-4 ${
-                  activeTab === 'Mini apps' &&
-                  'text-primary-base border-primary-base border-b-2'
-                }`}
+                className={`flex items-center justify-center font-500 leading-tight cursor-pointer`}
                 onClick={() => setActiveTab('Mini apps')}
               >
-                Mini Apps
+                <div className="flex items-start justify-center gap-9">
+                  <span
+                    className={`pb-2 flex items-center justify-center ${
+                      activeTab === 'Mini apps'
+                        ? 'text-primary-base border-primary-base border-b-2'
+                        : 'text-secondary-base'
+                    }`}
+                  >
+                    Mini apps
+                  </span>
+                  {/* <div className="w-[1px] h-[10px] mt-[5px] bg-border-dark"></div> */}
+                </div>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-start px-36">
+      <div className="w-full flex flex-col justify-center items-start gap-8 px-[150px]">
         {faqs?.map((faq, index) => {
           return (
             <div
               key={index}
-              className="w-full flex flex-col justify-between items-center gap-y-[36px]"
+              className="w-full flex flex-col justify-between border-b-border-light border-b-[1px] items-center gap-8 pb-8"
             >
-              <div className="w-full flex gap-[80px] items-start justify-between">
-                <div className="w-full flex flex-col justify-center items-start gap-4">
-                  <div
-                    onClick={() => handleToggle(index)}
-                    className="font-medium leading-[20px] text-[#322c3c] cursor-pointer"
-                  >
-                    {faq.question}
-                  </div>
-                  {activeQuestion === index && (
-                    <div className="text-sm leading-[18px] text-[#6f6b76] w-full">
-                      {faq.answer}
+              <div className="w-full flex flex-col items-start">
+                <div className="w-full ">
+                  <div className="w-full flex flex-col justify-start items-start gap-3">
+                    <div
+                      onClick={() => handleToggle(index)}
+                      className="font-medium leading-tight text-secondary-base cursor-pointer flex items-center justify-between gap-20 w-full"
+                    >
+                      <div>{faq.question}</div>
+                      <div onClick={() => handleToggle(index)}>
+                        {activeQuestion === index ? (
+                          <Image
+                            src={arrowUp}
+                            alt={'arrow up'}
+                            height={7}
+                            width={12}
+                            onClick={() => handleToggle(index)}
+                          />
+                        ) : (
+                          <Image
+                            src={arrowDown}
+                            alt={'arrow down'}
+                            height={7}
+                            width={12}
+                            onClick={() => handleToggle(index)}
+                          />
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
-                <div onClick={() => handleToggle(index)}>
-                  {activeQuestion === index ? (
-                    <Image
-                      src={arrowDown}
-                      alt={'arrow up'}
-                      height={7}
-                      width={12}
-                    />
-                  ) : (
-                    <Image
-                      src={arrowUp}
-                      alt={'arrow up'}
-                      height={7}
-                      width={12}
-                    />
-                  )}
+                    {activeQuestion === index && (
+                      <div className="text-sm leading-tight text-secondary-500 w-4/5">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-              <div
-                id="Line"
-                className="border-solid border-border-light w-full h-px border-t mb-[36px]"
-              />
             </div>
           );
         })}

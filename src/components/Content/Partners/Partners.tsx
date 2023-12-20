@@ -32,18 +32,18 @@ const Partners = (): JSX.Element => {
 
   return (
     <>
-      <div className="min-h-[640px] px-[150px] w-full inline-flex flex-col items-center justify-center mb-[20px] gap-12">
+      <div className="px-[150px] w-full inline-flex flex-col items-center justify-center gap-9">
         <div className="gap-9 flex justify-center items-center flex-col">
           <h1 className="text-5xl text-center font-semibold">
             We power Pakistan’s biggest{' '}
             <span className="text-primary-base">online brands</span>
           </h1>
         </div>
-        <div className="bg-warning-600 w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-5 ">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-5 ">
           {partnersImages.map((item, index) => (
             <div
               key={index}
-              className="bg-primary-base py-9 px-5 flex items-center justify-center"
+              className="py-9 px-5 flex items-center justify-center"
             >
               <Image
                 src={item}

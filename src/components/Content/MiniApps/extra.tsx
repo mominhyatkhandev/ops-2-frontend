@@ -91,11 +91,11 @@
               className="self-start w-24 shrink-0"
             />
           </div>
-          <div className="text-5xl font-['SF_Pro_Display'] font-semibold leading-[60px] text-[#322c3c]">
+          <div className="text-5xl font-['SF_Pro_Display'] font-semibold leading-tight text-[#322c3c]">
             Merchant Portal
           </div>
         </div>
-        <div className="font-['SF_Pro_Display'] leading-[20px] text-[#322c3c]">
+        <div className="font-['SF_Pro_Display'] leading-tight text-[#322c3c]">
           Introductory text, lorem ipsum, including QR,
           <br />
           Online Payments and Mini-APPS

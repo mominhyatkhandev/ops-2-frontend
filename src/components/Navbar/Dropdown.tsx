@@ -30,7 +30,7 @@ const Dropdown = ({ isHovered, setSelectedOption }: IDropdownProps) => {
   return (
     <>
       {isHovered && (
-        <div className="absolute top-[82px] left-0 shadow-md p-[24px] bg-neutral-white-base flex flex-col justify-start gap-[24px] w-[225px] items-start rounded-lg z-10">
+        <div className="absolute top-[42px] left-0 shadow-md p-[24px] bg-neutral-white-base flex flex-col justify-start gap-[24px] w-[225px] items-start rounded-lg z-10">
           {dropDownList.map((item, index) => (
             <Link key={index} href={`/accept-payments/${item.link}`}>
               <div

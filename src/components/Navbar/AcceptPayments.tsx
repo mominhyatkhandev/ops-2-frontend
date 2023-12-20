@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, SetStateAction } from 'react';
 import Dropdown from './Dropdown';
 
 const AcceptPayments = ({
@@ -10,8 +10,9 @@ const AcceptPayments = ({
   other: string;
   clickTrigger: boolean;
 }): JSX.Element => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   useEffect(() => {
     const pathArray = window.location.pathname.split('/');
@@ -37,40 +38,32 @@ const AcceptPayments = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={() => setIsHovered(!isHovered)}
-        className={`relative text-secondary-base text-sm cursor-pointer text-center px-2 h-[82px] flex ${
-          selectedOption && `flex-col items-start justify-start`
-        } items-center justify-center`}
+        className={`relative text-secondary-base text-sm cursor-pointer text-center
+        `}
       >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            // marginTop: '20px'
-            marginTop: !isHovered && selectedOption !== '' ? '20px' : '0px'
-          }}
-        >
+        <div>
           <div
-            className={`${
-              isHovered
-                ? `text-primary-base flex flex-start hover:transition duration-300`
-                : `flex flex-start hover:transition duration-300 `
-            }`}
+            className={`relative py-3 ${
+              isHovered && 'text-primary-base'
+            } hover:text-primary-base hover:transition duration-300`}
           >
             Accept Payments
           </div>
-          {!isHovered && selectedOption && (
-            <div className="text-primary-base flex flex-start">
-              {selectedOption}
-            </div>
-          )}
         </div>
+        {selectedOption && (
+          <div className="text-primary-base absolute top-9 text-xs leading-tight">
+            {selectedOption}
+          </div>
+        )}
 
-        <div>
-          <Dropdown
-            isHovered={isHovered}
-            setSelectedOption={setSelectedOption}
-          />
-        </div>
+        <>
+          {isHovered && (
+            <Dropdown
+              isHovered={isHovered}
+              setSelectedOption={setSelectedOption}
+            />
+          )}
+        </>
       </li>
     </>
   );

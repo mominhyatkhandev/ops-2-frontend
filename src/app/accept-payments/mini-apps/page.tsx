@@ -7,34 +7,36 @@ import { cards } from '@/utils/data';
 
 const MiniApps = () => {
   return (
-    <>
-      {/* <div className="pg-bg flex items-center justify-start bg-center bg-cover bg-no-repeat p-[200px] mb-[20px] h-[660px] relative"> */}
-      <div className="flex items-center justify-start p-[150px] mb-[20px] h-[660px] relative">
+    <div className="flex flex-col">
+      <div className="flex items-center justify-start p-[150px] min-h-[660px] relative">
         <Image
           src={miniAppsBG}
           alt="paymentGateway Background"
           layout="fill"
-          // objectFit="cover"
           quality={100}
-          className="absolute inset-0"
+          // className="absolute inset-0"
         />
-        <div className="flex w-[710px] flex-col justify-center items-start gap-[48px] rounded-lg relative">
-          <p className="heading-primary">
-            <span className="text-primary-base"> easypaisa</span>
-            <br /> Mini App Store
-          </p>
-          {/* <p className="text-dark text-base font-normal w-[657] leading-[20px]">
-            <span className="text-primary-base"> easypaisa</span> Mini App Store
-          </p> */}
-          <p className="text-secondary-base text-base font-normal w-[657] leading-[20px]">
-            A Feature Rich Ecosystem for Your Brand Showcase your Products and
-            Services to Pakistan’s Largest online Audience.
-          </p>
-          <Button label="Sign up" className="button-primary" />
+        <div className="flex flex-col justify-center items-start gap-9 rounded-lg relative">
+          <div className="flex flex-col gap-4">
+            <p className="heading-primary">
+              <span className="text-primary-base"> easypaisa</span>
+              <br /> Mini App Store
+            </p>
+            <p className="text-secondary-base text-base font-normal w-[657] leading-tight">
+              A Feature Rich Ecosystem for Your Brand Showcase your Products and
+              Services to Pakistan’s <br /> Largest online Audience.
+            </p>
+          </div>
+          <Button
+            label="Sign up"
+            className="button-primary w-[200px] px-3 py-[19px]"
+          />
         </div>
       </div>
-      <Info title={'mini apps'} cardsArray={cards} />
-    </>
+      <div className="flex flex-col">
+        <Info title={'mini apps'} cardsArray={cards} />
+      </div>
+    </div>
   );
 };
 
