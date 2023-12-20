@@ -1,6 +1,6 @@
+'use client';
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import InputPrimary from '@/components/UI/Inputs/InputPrimary';
 import Input from '@/components/UI/Inputs/Input';
 import { signUpInitialValues, signUpSchema } from '@/validations/signUpSchema';
 import Button from '@/components/UI/Button/PrimaryButton';

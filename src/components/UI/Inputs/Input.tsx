@@ -1,19 +1,37 @@
-import { error } from 'console';
+import React from 'react';
 import { ErrorMessage, Field } from 'formik';
-import React, { useState } from 'react';
 
-const Input = ({ label, type, name, error, touched }: any) => {
+interface IInput {
+  name: string;
+  label: string;
+  type: string;
+  className?: string;
+  isDisabled?: boolean;
+  error: string | undefined;
+  touched: boolean | undefined;
+}
+
+const Input = ({
+  name,
+  label,
+  type,
+  className,
+  isDisabled = false,
+  error,
+  touched
+}: IInput) => {
   return (
     <div className="w-full relative bg-neutral-white-base">
       <Field
         name={name}
         type={type}
         id={label}
-        className={`block rounded-lg px-2.5 pb-1.5 pt-5 w-full text-base leading-tight font-500 text-secondary-base border-2 border-border-light appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-primary-base peer ${
+        className={`${className} block rounded-lg px-2.5 pb-1.5 pt-5 w-full text-base leading-tight font-500 text-secondary-base border-2 border-border-light appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-primary-base peer ${
           touched && error && 'border-danger-base focus:border-danger-base'
         }`}
         placeholder=" "
-        disabled={false}
+        disabled={isDisabled}
+        // autoComplete="off"
       />
       <label
         htmlFor={label}
