@@ -1,8 +1,29 @@
 import Button from '@/components/UI/Button/PrimaryButton';
 import InputPrimary from '@/components/UI/Inputs/InputPrimary';
 import React from 'react';
+import eye from '../../assets/icons/eye.svg';
+import * as Yup from 'yup';
 
 const page = () => {
+  const initialValues = {
+    username: '',
+    // lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  };
+
+  const signUpSchema = Yup.object().shape({
+    username: Yup.string().required('First Name is required'),
+    // lastName: Yup.string().required('Last Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    password: Yup.string()
+      .min(6, 'Password must be at least 6 characters')
+      .required('Password is required'),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref('password'), ''], 'Passwords must match')
+      .required('Confirm Password is required')
+  });
   return (
     <>
       <div
@@ -108,7 +129,6 @@ const page = () => {
               label="Next"
               className="button-primary w-[270px] text-sm px-3 py-[19px]"
             />
-            {/* <InputPrimary label="Username" type="text" /> */}
           </div>
         </div>
       </div>
