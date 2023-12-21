@@ -1,140 +1,66 @@
+'use client';
 import Button from '@/components/UI/Button/PrimaryButton';
 import InputPrimary from '@/components/UI/Inputs/InputPrimary';
-import React from 'react';
+import React, { useState } from 'react';
 import eye from '../../assets/icons/eye.svg';
 import * as Yup from 'yup';
+import CheckboxInput from '@/components/UI/Inputs/CheckboxInput';
+import GlobalIcon from '@/assets/icons/global.svg';
+import QrIcon from '@/assets/icons/scanning.svg';
+import CartIcon from '@/assets/icons/cartIcon.svg';
+import HeaderWrapper from '@/components/UI/Wrappers/HeaderWrapper';
+import FormWrapper from '@/components/OTP/FormWrapper';
 
-const page = () => {
-  const initialValues = {
-    username: '',
-    // lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
+const AccountOptions = () => {
+  const [selectedOption, setSelectedOption] = useState<string>('');
+
+  const handleSelectedOption = (option: string) => {
+    setSelectedOption(option);
   };
 
-  const signUpSchema = Yup.object().shape({
-    username: Yup.string().required('First Name is required'),
-    // lastName: Yup.string().required('Last Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string()
-      .min(6, 'Password must be at least 6 characters')
-      .required('Password is required'),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), ''], 'Passwords must match')
-      .required('Confirm Password is required')
-  });
+  console.log('selected option : ', selectedOption);
+
   return (
-    <>
-      <div
-        id="SignupAccountOptionsRoot"
-        className="bg-neutral-white-base flex flex-col pb-[124px]"
-      >
-        <div className="flex flex-col px-[150px] pt-[76px] gap-6 items-start">
-          <div className="flex flex-col gap-2 items-start">
-            <div className="text-5xl font-semibold leading-tight text-[#322c3c]">
-              What would you like to Sign up for?
-            </div>
-            <div className=" leading-tight text-[#5b5663]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmodtempor incididunt ut labore et dolore
-            </div>
+    <div className="flex flex-col gap-6">
+      <HeaderWrapper
+        heading="What would you like to Sign up for?"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmodtempor incididunt ut labore et dolore"
+      />
+      <FormWrapper className="flex flex-col justify-center items-center gap-6">
+        <div className="w-full flex flex-col justify-between gap-4 items-start">
+          <div className=" font-semibold text-base leading-tight text-[#322c3c]">
+            Please Select One Option
           </div>
-          <div className="border-solid border-border-light bg-screen-grey flex flex-col justify-center px-[290px] py-[60px] gap-8 w-full items-center rounded-lg">
-            <div className="w-full flex flex-col justify-between gap-4 items-start">
-              <div className=" font-semibold leading-tight text-[#322c3c]">
-                Please Select One Option
-              </div>
-              <div
-                id="InputField"
-                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
-              >
-                <div className="flex flex-row gap-4 w-full items-start">
-                  <img
-                    src="https://file.rendit.io/n/vXZZAAi6JI9o5pNo67W9.svg"
-                    alt="Vuesaxlinearglobal"
-                    id="Vuesaxlinearglobal"
-                    className="w-6"
-                  />
-                  <div
-                    id="InputHeading"
-                    className="text-sm w-full font-medium leading-tight text-[#322c3c] mt-1"
-                  >
-                    Online Payments
-                  </div>
-                </div>
-                <div
-                  id="Ellipse"
-                  className="bg-[url(https://file.rendit.io/n/oJT5KXretMLunELLSXjO.svg)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-row w-6 h-6 items-start pt-2 px-2"
-                >
-                  <img
-                    src="https://file.rendit.io/n/q4Qk176WFSLiMD90E9hs.svg"
-                    alt="Group"
-                    className="w-2"
-                  />
-                </div>
-              </div>
-              <div
-                id="InputField1"
-                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
-              >
-                <div className="flex flex-row gap-4 w-full items-start">
-                  <img
-                    src="https://file.rendit.io/n/v8u5idxKRGuj9g39CRVz.svg"
-                    alt="Vuesaxlinearscanning"
-                    id="Vuesaxlinearscanning"
-                    className="w-6"
-                  />
-                  <div
-                    id="InputHeading1"
-                    className="text-sm  font-medium leading-tight text-[#322c3c] mt-1"
-                  >
-                    QR Payments
-                  </div>
-                </div>
-                <img
-                  src="https://file.rendit.io/n/2de4wvF0uOrZyBF4WFNh.svg"
-                  alt="IconCheckbox1"
-                  id="IconCheckbox1"
-                  className="w-6"
-                />
-              </div>
-              <div
-                id="InputField2"
-                className="border-solid border-border-light bg-white flex flex-row justify-between w-full h-16 items-start pt-4 px-5 border rounded-lg"
-              >
-                <div className="flex flex-row gap-4 w-full items-start">
-                  <img
-                    src="https://file.rendit.io/n/JVFthuBWFIsCMvJFGu4A.svg"
-                    alt="IconInputfield2"
-                    id="IconInputfield2"
-                    className="w-6"
-                  />
-                  <div
-                    id="InputHeading2"
-                    className="text-sm  font-medium leading-tight text-[#322c3c] mt-1"
-                  >
-                    Mini Apps
-                  </div>
-                </div>
-                <img
-                  src="https://file.rendit.io/n/2de4wvF0uOrZyBF4WFNh.svg"
-                  alt="IconCheckbox2"
-                  id="IconCheckbox2"
-                  className="w-6"
-                />
-              </div>
-            </div>
-            <Button
-              label="Next"
-              className="button-primary w-[270px] text-sm px-3 py-[19px]"
-            />
-          </div>
+
+          <CheckboxInput
+            label="Online Payments"
+            logo={GlobalIcon}
+            selected={selectedOption === 'Online Payments'}
+            onSelect={() => handleSelectedOption('Online Payments')}
+          />
+          <CheckboxInput
+            label="QR Payments"
+            logo={QrIcon}
+            selected={selectedOption === 'QR Payments'}
+            onSelect={() => handleSelectedOption('QR Payments')}
+          />
+          <CheckboxInput
+            label="Mini Apps"
+            logo={CartIcon}
+            selected={selectedOption === 'Mini Apps'}
+            onSelect={() => handleSelectedOption('Mini Apps')}
+          />
         </div>
-      </div>
+        <Button
+          label="Next"
+          isDisabled={selectedOption === ''}
+          className="button-primary w-[270px] text-sm px-3 py-[19px]"
+        />
+      </FormWrapper>
       ;
-    </>
+    </div>
   );
 };
 
-export default page;
+export default AccountOptions;

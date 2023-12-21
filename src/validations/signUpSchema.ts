@@ -23,7 +23,7 @@ export const signUpSchema = Yup.object().shape({
     .min(3, 'Must be more than 3 letters')
     .max(12, 'Max limit exceed'),
   merchantName: Yup.string()
-    .required('Last name is required')
+    .required('Merchant name is required')
     .min(3, 'Must be more than 3 letters')
     .max(12, 'Max limit exceed'),
   email: Yup.string().email('Invalid email').required('Email is required'),

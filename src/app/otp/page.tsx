@@ -1,7 +1,7 @@
 import React from 'react';
-import SignUpHeader from '@/components/OTP/SignUpHeader';
+import SignUpHeader from '@/components/UI/Wrappers/HeaderWrapper';
 import OTP from '@/components/OTP/OTP';
-import WrapperComponent from '@/components/OTP/SignUpWrapper';
+import WrapperComponent from '@/components/OTP/FormWrapper';
 
 const OtpInputWithValidation = () => {
   return (
