@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 // import Checkbox from '@/components/UI/Checkbox';
-import Checkbox from '@/components/UI/Checkbox/Checkbox';
+import Checkbox from '@/components/UI/Inputs/CheckboxInput';
 import GlobalIcon from '@/assets/icons/global.svg';
 import OnlinePayments from '@/components/Content/OnlinePayments/OnlinePayments';
 function test() {
@@ -18,13 +18,13 @@ function test() {
       <Checkbox
         logo={GlobalIcon}
         label="Online Payments"
-        isSelected={selectedOption === 'Online Payments'}
+        selected={selectedOption === 'Online Payments'}
         onSelect={() => handleOptionSelect('Online Payments')}
       />
       <Checkbox
         logo={GlobalIcon}
         label="QR Payments"
-        isSelected={selectedOption === 'QR Payments'}
+        selected={selectedOption === 'QR Payments'}
         onSelect={() => handleOptionSelect('QR Payments')}
       />
       {/* <Checkbox logo={GlobalIcon} label="Mini Apps" /> */}

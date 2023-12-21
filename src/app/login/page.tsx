@@ -1,9 +1,14 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import LoginBg from '@/assets/images/login-bg.jpg';
 import Input from '@/components/UI/Inputs/Input';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Link from 'next/link';
+import { Form, Formik } from 'formik';
+import loginSchema, { loginInitialValues } from '@/validations/loginSchema';
+import ImageInput from '@/components/UI/Inputs/ImageInput';
+import eye from '@/assets/icons/eye.svg';
 
 const Login = () => {
   return (
@@ -16,13 +21,53 @@ const Login = () => {
           objectFit="cover"
           className="absolute max-w-full inset-0"
         />
-        <div className="relative bg-neutral-white-base w-full h-max rounded-lg border-[1px] border-border-light py-9 px-[60px]">
+        <div className="relative bg-neutral-white-base w-[680px] h-max rounded-lg border-[1px] border-border-light py-9 px-[60px]">
           <span className="flex w-full pb-8 justify-center text-[40px] font-semibold">
             Login to your account
           </span>
-          <div className="flex flex-col gap-6">
-            <Input
-              name={'username'}
+          <Formik
+            initialValues={loginInitialValues}
+            validationSchema={loginSchema}
+            onSubmit={() => {
+              console.log('login submitted');
+            }}
+          >
+            {formik => (
+              <Form className="flex flex-col items-center gap-6">
+                <Input
+                  label="Username"
+                  name="username"
+                  type="text"
+                  error={formik.errors.username}
+                  touched={formik.touched.username}
+                />
+                {/* <Input
+                  label="Password"
+                  name="password"
+                  type="password"
+                  error={formik.errors.password}
+                  touched={formik.touched.password}
+                /> */}
+                <ImageInput
+                  name="password"
+                  label="Password"
+                  type="password"
+                  error={formik.errors.password}
+                  touched={formik.touched.password}
+                  image={eye}
+                />
+
+                <Button
+                  label="Login"
+                  type="submit"
+                  isDisabled={!formik.isValid}
+                  className={`button-primary w-[270px] py-[19px] px-4 text-sm leading-tight transition duration-300`}
+                />
+              </Form>
+            )}
+          </Formik>
+          {/* <div className="flex flex-col gap-6">
+            <InputPrimary
               label="Username or email"
               type="kmska"
               className="knak"
@@ -47,8 +92,8 @@ const Login = () => {
               label="Login"
               className="button-primary w-[270px] px-3 py-[19px]"
             />
-          </div>
-          <span className="flex justify-center text-sm font-normal">
+          </div> */}
+          <span className="flex justify-center text-sm leading-tight font-normal pt-6">
             Dont have an account? &nbsp;
             <Link
               href={'/'}
