@@ -1,6 +1,6 @@
 import React from 'react';
 import { ErrorMessage, Field } from 'formik';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface IInput {
   name: string;
@@ -10,7 +10,7 @@ interface IInput {
   isDisabled?: boolean;
   error: string | undefined;
   touched: boolean | undefined;
-  image: React.ReactElement;
+  image: StaticImageData;
 }
 
 const ImageInput = ({

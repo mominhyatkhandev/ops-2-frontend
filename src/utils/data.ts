@@ -1,6 +1,4 @@
-// import { TCard } from '@/types/static/static';
 import { TCard } from '@/types/static/static';
-// import OPJ from '@/assets/icons/opj.jpg';
 import OP1 from '@/assets/icons/online-payments-v1.svg';
 import OP2 from '@/assets/icons/online-payments-v2.svg';
 import QR1 from '@/assets/icons/qr-integrations-v1.svg';

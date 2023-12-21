@@ -36,10 +36,11 @@ const Login = () => {
               <Form className="flex flex-col items-center gap-6">
                 <ImageInput
                   label="Username"
-                  name="username"
+                  name="Username"
                   type="text"
                   error={formik.errors.username}
                   touched={formik.touched.username}
+                  image={eye}
                 />
                 {/* <Input
                   label="Password"
@@ -96,7 +97,7 @@ const Login = () => {
           <span className="flex justify-center text-sm leading-tight font-normal pt-6">
             Dont have an account? &nbsp;
             <Link
-              href={'/'}
+              href={'/sign-up'}
               // className="text-primary-base underline after:translate-y-1"
               className="text-primary-base relative inline-block after:-content-[''] after:block after:w-full after:h-0.5 after:bg-primary-base after:absolute after:bottom-0 after:left-0 after:transform after:translate-y-1 after:transition-transform after:origin-bottom"
             >
