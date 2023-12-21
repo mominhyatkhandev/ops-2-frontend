@@ -27,7 +27,7 @@ const AccountOptions = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmodtempor incididunt ut labore et dolore"
       />
-      <FormWrapper className="flex flex-col justify-center items-center gap-6">
+      <FormWrapper>
         <div className="w-full flex flex-col justify-between gap-4 items-start">
           <div className=" font-semibold text-base leading-tight text-[#322c3c]">
             Please Select One Option
@@ -52,13 +52,14 @@ const AccountOptions = () => {
             onSelect={() => handleSelectedOption('Mini Apps')}
           />
         </div>
-        <Button
-          label="Next"
-          isDisabled={selectedOption === ''}
-          className="button-primary w-[270px] text-sm px-3 py-[19px]"
-        />
+        <div className="flex justify-center pt-[32px]">
+          <Button
+            label="Next"
+            isDisabled={selectedOption === ''}
+            className="button-primary w-[270px] text-sm px-3 py-[19px]"
+          />
+        </div>
       </FormWrapper>
-      ;
     </div>
   );
 };

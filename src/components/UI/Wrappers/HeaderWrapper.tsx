@@ -21,7 +21,7 @@ function HeaderWrapper({
           </div>
         ) : null}
         {show ? (
-          <div className="flex flex-col pt-[36px] gap-2">
+          <div className="flex flex-col pt-[36px] pb-[24px] gap-2">
             <div className="flex w-full text-5xl font-semibold text-secondary-base">
               {heading}
             </div>

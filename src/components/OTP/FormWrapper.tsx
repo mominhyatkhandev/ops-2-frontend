@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 
 interface IFormWrapper {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 const FormWrapper = ({ children, className }: IFormWrapper) => {
   return (
     <div className="px-[150px]">
-      <div
-        className={`${className} border-[0.5px] rounded-lg border-border-light bg-screen-grey px-[290px] py-[60px]`}
-      >
+      <div className="border-[0.5px] rounded-lg border-border-light bg-screen-grey px-[290px] py-[60px]">
         {children}
       </div>
     </div>

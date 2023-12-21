@@ -7,7 +7,7 @@ const OtpInputWithValidation = () => {
   return (
     <div>
       <SignUpHeader
-        label={'Enter One Time Password (OTP)'}
+        heading={'Enter One Time Password (OTP)'}
         description={
           "we've sent verification on your email address (abc@domain.com) and your mobile number (03341234567)"
         }
