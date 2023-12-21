@@ -34,7 +34,7 @@ const Login = () => {
           >
             {formik => (
               <Form className="flex flex-col items-center gap-6">
-                <Input
+                <ImageInput
                   label="Username"
                   name="username"
                   type="text"
