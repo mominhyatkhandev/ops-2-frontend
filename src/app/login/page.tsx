@@ -7,7 +7,6 @@ import Button from '@/components/UI/Button/PrimaryButton';
 import Link from 'next/link';
 import { Form, Formik } from 'formik';
 import loginSchema, { loginInitialValues } from '@/validations/loginSchema';
-import ImageInput from '@/components/UI/Inputs/ImageInput';
 import eye from '@/assets/icons/eye.svg';
 
 const Login = () => {
@@ -34,13 +33,12 @@ const Login = () => {
           >
             {formik => (
               <Form className="flex flex-col items-center gap-6">
-                <ImageInput
+                <Input
                   label="Username"
-                  name="Username"
+                  name="username"
                   type="text"
                   error={formik.errors.username}
                   touched={formik.touched.username}
-                  image={eye}
                 />
                 {/* <Input
                   label="Password"

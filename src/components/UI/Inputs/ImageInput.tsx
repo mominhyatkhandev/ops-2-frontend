@@ -1,6 +1,6 @@
 import React from 'react';
 import { ErrorMessage, Field } from 'formik';
-import Image, { StaticImageData } from 'next/image';
+// import Image, { StaticImageData } from 'next/image';
 import Image, { StaticImageData } from 'next/image';
 
 interface IInput {

@@ -70,7 +70,7 @@ const Input = ({
       <ErrorMessage
         name={name}
         component="div"
-        className="text-danger-base px-2.5 pt-[6px] text-xs leading-tight"
+        className="text-danger-base px-2.5 text-xs leading-tight"
       />
     </div>
   );

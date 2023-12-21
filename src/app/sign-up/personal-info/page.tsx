@@ -132,18 +132,22 @@ const PersonalInfo = () => {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                    />
                     <p className="text-xs leading-tight font-semibold">
                       I agree to easypaisa Terms & Conditions
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col items-end ">
+                <div className="flex flex-col items-end">
                   <div className="w-full">VERIFY COMPONENT</div>
                   <Button
                     label="Sign up"
                     type="submit"
-                    isDisabled={!formik.isValid}
+                    isDisabled={!formik.isValid || !isChecked}
                     className={`button-primary w-[260px] py-[19px] px-4 text-sm leading-tight transition duration-300`}
                   />
                 </div>
