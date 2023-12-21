@@ -1,7 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { ErrorMessage, Field } from 'formik';
+import { StaticImageData } from 'next/image';
 
 interface IInput {
   name: string;
@@ -9,6 +11,8 @@ interface IInput {
   type: string;
   className?: string;
   isDisabled?: boolean;
+  hasImage?: boolean;
+  image?: StaticImageData;
   error: string | undefined;
   touched: boolean | undefined;
 }
@@ -20,13 +24,19 @@ const Input = ({
   className,
   isDisabled = false,
   error,
-  touched
+  touched,
+  hasImage,
+  image
 }: IInput) => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const handleImageClick = () => {
+    setIsPasswordVisible(prev => !prev);
+  };
   return (
     <div className="w-full flex flex-col gap-[6px] relative ">
       <Field
         name={name}
-        type={type}
+        type={isPasswordVisible ? 'text' : type}
         id={label}
         className={`${className} bg-neutral-white-base block rounded-lg px-2.5 pb-1.5 pt-5 w-full text-base leading-tight font-500 text-secondary-base border-2 border-border-light appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-primary-base peer ${
           touched && error && 'border-danger-base focus:border-danger-base'
@@ -41,6 +51,18 @@ const Input = ({
       >
         {label}
       </label>
+      {hasImage && image && (
+        <div className="absolute top-1/2 transform -translate-y-1/2 right-2">
+          {/* Your image component */}
+          <Image
+            src={image}
+            alt="Image"
+            className="w-4 h-4"
+            onMouseDown={handleImageClick}
+            onMouseUp={() => setIsPasswordVisible(false)}
+          />
+        </div>
+      )}
       {/* Success msg if any  */}
       {/* {touched && !error && (
         <p className="p-2 text-primary-base text-xs">Valid</p>

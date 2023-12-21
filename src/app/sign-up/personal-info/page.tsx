@@ -2,12 +2,18 @@
 import FormWrapper from '@/components/OTP/FormWrapper';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Input from '@/components/UI/Inputs/Input';
+import SuccessModal from '@/components/UI/Modal/SuccessModal';
 import HeaderWrapper from '@/components/UI/Wrappers/HeaderWrapper';
 import { signUpInitialValues, signUpSchema } from '@/validations/signUpSchema';
 import { Form, Formik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 
 const PersonalInfo = () => {
+  const [isChecked, setChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    // Toggle the state value when the checkbox is clicked
+    setChecked(!isChecked);
+  };
   return (
     <>
       <Formik
@@ -148,6 +154,9 @@ const PersonalInfo = () => {
           </Form>
         )}
       </Formik>
+      <div className="w-full flex justify-center items-center">
+        <SuccessModal />
+      </div>
     </>
   );
 };

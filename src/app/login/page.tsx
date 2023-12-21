@@ -49,12 +49,13 @@ const Login = () => {
                   error={formik.errors.password}
                   touched={formik.touched.password}
                 /> */}
-                <ImageInput
+                <Input
                   name="password"
                   label="Password"
                   type="password"
                   error={formik.errors.password}
                   touched={formik.touched.password}
+                  hasImage={true}
                   image={eye}
                 />
 
