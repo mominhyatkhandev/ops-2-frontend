@@ -6,3 +6,8 @@ type TCard = {
   logo: { image1: StaticImageData; image2: StaticImageData };
   description: string;
 };
+
+type TArray = {
+  question: string;
+  answer: string;
+};

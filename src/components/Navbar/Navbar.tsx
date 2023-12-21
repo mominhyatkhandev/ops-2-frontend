@@ -6,11 +6,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AcceptPayments from './AcceptPayments';
 import CustomModal from '../UI/Modal/CustomModal';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [other, setOther] = useState<string>('');
   const [clickTrigger, setClickTrigger] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const router = useRouter();
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -65,6 +68,8 @@ const Navbar = () => {
           <div className="flex flex-row gap-6">
             <Button
               label="Login"
+              // onClickHandler={}
+              onClickHandler={() => router.push('/login')}
               className="button-secondary w-[96px] text-xs leading-tight py-[11px] px-2"
             />
             {/* <Link href={`/sign-up`}> */}

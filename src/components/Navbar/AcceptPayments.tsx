@@ -19,16 +19,13 @@ const AcceptPayments = ({
     const selectedTitle = pathArray[pathArray.length - 1];
     let formattedTitle;
 
-    if (other === 'Home' || other === 'Developer' || other === 'FAQs') {
-      console.log('other', other);
+    if (other !== 'AcceptPayments') {
       formattedTitle = '';
     } else {
       formattedTitle = selectedTitle
         .replace(/-/g, ' ')
         .replace(/(?:^|\s)\S/g, match => match.toUpperCase());
     }
-
-    console.log('formatted title', formattedTitle);
     setSelectedOption(formattedTitle);
   }, [other, clickTrigger]);
 
