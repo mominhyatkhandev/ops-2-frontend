@@ -1,5 +1,5 @@
 'use client';
-import FormWrapper from '@/components/OTP/FormWrapper';
+import FormWrapper from '@/components/UI/Wrappers/FormLayout';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Input from '@/components/UI/Inputs/Input';
 import SuccessModal from '@/components/UI/Modal/SuccessModal';
