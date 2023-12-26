@@ -1,21 +1,30 @@
 'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 interface IButton {
   label: string;
   type?: 'button' | 'submit';
   className?: string;
   isDisabled?: boolean;
-  onClickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  routeName: string;
+  // onClickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button = ({
   label,
   type = 'button',
-  onClickHandler = () => {},
+  // onClickHandler = () => {},
+  routeName,
   className,
   isDisabled = false
 }: IButton) => {
+  const router = useRouter();
+  const handleClick = () => {
+    console.log(`Button was clicked for route: ${routeName}`);
+    router.push(routeName);
+  };
+
   return (
     <button
       type={type}
@@ -24,8 +33,8 @@ const Button = ({
           ? 'bg-neutral-black-300 cursor-default'
           : 'bg-primary-base cursor-pointer'
       } ${className}`}
-      onClick={onClickHandler}
       disabled={isDisabled}
+      onClick={handleClick}
     >
       <div className="w-full">{label}</div>
     </button>

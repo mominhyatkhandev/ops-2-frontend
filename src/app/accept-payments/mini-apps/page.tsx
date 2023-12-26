@@ -4,11 +4,12 @@ import Image from 'next/image';
 import miniAppsBG from '@/assets/images/mini-apps.jpg';
 import Info from '@/components/Content/Info/Info';
 import { cards } from '@/utils/data';
+import AcceptPaymentWrapper from '@/components/UI/Wrappers/AcceptPaymentWrapper';
 
 const MiniApps = () => {
   return (
-    <div className="flex flex-col">
-      <div className="flex items-center justify-start p-[150px] min-h-[660px] relative">
+    <>
+      <AcceptPaymentWrapper>
         <Image
           src={miniAppsBG}
           alt="paymentGateway Background"
@@ -29,14 +30,15 @@ const MiniApps = () => {
           </div>
           <Button
             label="Sign up"
+            routeName="/login"
             className="button-primary w-[200px] px-3 py-[19px] text-sm leading-tight"
           />
         </div>
-      </div>
+      </AcceptPaymentWrapper>
       <div className="flex flex-col">
         <Info title={'mini apps'} cardsArray={cards} />
       </div>
-    </div>
+    </>
   );
 };
 
