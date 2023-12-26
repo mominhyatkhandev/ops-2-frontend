@@ -1,8 +1,13 @@
 'use client';
-'use client';
 import React, { useRef, useEffect, useState, KeyboardEvent } from 'react';
 
-function OTP({ numberOfDigits = 6 }: { numberOfDigits?: number }) {
+function OTP({
+  numberOfDigits = 6,
+  description
+}: {
+  numberOfDigits?: number;
+  description: string;
+}) {
   const [otp, setOtp] = useState(new Array(numberOfDigits).fill(''));
   const [otpError, setOtpError] = useState<string | null>(null);
   const otpBoxReference = useRef<HTMLInputElement[]>([]);
@@ -34,9 +39,9 @@ function OTP({ numberOfDigits = 6 }: { numberOfDigits?: number }) {
   }
 
   return (
-    <article className="flex flex-col w-full gap-4">
+    <article className="flex flex-col gap-4">
       <p className="text-base text-secondary-base font-semibold">
-        Enter Email OTP here
+        {description}
       </p>
 
       <div className="flex w-max items-center gap-9 text-lg text-secondary-900">

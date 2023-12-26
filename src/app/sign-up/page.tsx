@@ -9,7 +9,7 @@ import GlobalIcon from '@/assets/icons/global.svg';
 import QrIcon from '@/assets/icons/scanning.svg';
 import CartIcon from '@/assets/icons/cartIcon.svg';
 import HeaderWrapper from '@/components/UI/Wrappers/HeaderWrapper';
-import FormWrapper from '@/components/OTP/FormWrapper';
+import FormWrapper from '@/components/UI/Wrappers/FormLayout';
 
 const AccountOptions = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');

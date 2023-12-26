@@ -1,13 +1,19 @@
 'use client';
-import FormWrapper from '@/components/OTP/FormWrapper';
+import FormWrapper from '@/components/UI/Wrappers/FormLayout';
 import Button from '@/components/UI/Button/PrimaryButton';
 import Input from '@/components/UI/Inputs/Input';
+import SuccessModal from '@/components/UI/Modal/SuccessModal';
 import HeaderWrapper from '@/components/UI/Wrappers/HeaderWrapper';
 import { signUpInitialValues, signUpSchema } from '@/validations/signUpSchema';
 import { Form, Formik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 
 const PersonalInfo = () => {
+  const [isChecked, setChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    // Toggle the state value when the checkbox is clicked
+    setChecked(!isChecked);
+  };
   return (
     <>
       <Formik
@@ -126,18 +132,22 @@ const PersonalInfo = () => {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                    />
                     <p className="text-xs leading-tight font-semibold">
                       I agree to easypaisa Terms & Conditions
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col items-end ">
+                <div className="flex flex-col items-end">
                   <div className="w-full">VERIFY COMPONENT</div>
                   <Button
                     label="Sign up"
                     type="submit"
-                    isDisabled={!formik.isValid}
+                    isDisabled={!formik.isValid || !isChecked}
                     className={`button-primary w-[260px] py-[19px] px-4 text-sm leading-tight transition duration-300`}
                   />
                 </div>
@@ -148,6 +158,9 @@ const PersonalInfo = () => {
           </Form>
         )}
       </Formik>
+      <div className="w-full flex justify-center items-center">
+        <SuccessModal />
+      </div>
     </>
   );
 };
