@@ -3,3 +3,5 @@ type User = {
   name: string;
   email: string;
 };
+
+type TEndpoint = string;

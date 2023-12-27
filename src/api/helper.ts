@@ -1,6 +1,6 @@
 import apiClient from './apiClient';
 
-export const GET = async (endpoint: string, headers = {}) => {
+export const GET = async (endpoint: TEndpoint, headers = {}) => {
   try {
     const response = await apiClient.get(endpoint, headers);
     return response.data;
@@ -10,7 +10,7 @@ export const GET = async (endpoint: string, headers = {}) => {
   }
 };
 
-export const POST = async (endpoint: string, data: any, config = {}) => {
+export const POST = async (endpoint: TEndpoint, data: any, config = {}) => {
   try {
     const response = await apiClient.post(endpoint, data, config);
     return response.data;
@@ -20,7 +20,7 @@ export const POST = async (endpoint: string, data: any, config = {}) => {
   }
 };
 
-export const PATCH = async (endpoint: string, data: any) => {
+export const PATCH = async (endpoint: TEndpoint, data: any) => {
   try {
     const response = await apiClient.patch(endpoint, data);
     return response.data;
@@ -30,7 +30,7 @@ export const PATCH = async (endpoint: string, data: any) => {
   }
 };
 
-export const DELETE = async (endpoint: string) => {
+export const DELETE = async (endpoint: TEndpoint) => {
   try {
     const response = await apiClient.delete(endpoint);
     return response.data;

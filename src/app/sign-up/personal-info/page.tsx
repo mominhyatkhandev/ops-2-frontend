@@ -6,7 +6,31 @@ import SuccessModal from '@/components/UI/Modal/SuccessModal';
 import HeaderWrapper from '@/components/UI/Wrappers/HeaderWrapper';
 import { signUpInitialValues, signUpSchema } from '@/validations/signUpSchema';
 import { Form, Formik } from 'formik';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import apiClient from '@/api/apiClient';
+import useAxios from '@/hooks/useAxios';
+
+const onSubmit = async (values: any, { setSubmitting }: any) => {
+  try {
+    const response = await apiClient.post('api-point', values, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'jwt-token'
+      }
+    });
+
+    // Handle the response as needed
+    if (response.status === 200) {
+      console.log('Form submitted successfully');
+    } else {
+      console.error('Failed to submit form');
+    }
+  } catch (error) {
+    console.error('Error submitting form', error);
+  }
+
+  setSubmitting(false);
+};
 
 const PersonalInfo = () => {
   const [isChecked, setChecked] = useState(false);
@@ -14,14 +38,13 @@ const PersonalInfo = () => {
     // Toggle the state value when the checkbox is clicked
     setChecked(!isChecked);
   };
+
   return (
     <>
       <Formik
         initialValues={signUpInitialValues}
         validationSchema={signUpSchema}
-        onSubmit={() => {
-          console.log('Sign up form submitted');
-        }}
+        onSubmit={onSubmit}
       >
         {formik => (
           <Form>
@@ -158,9 +181,6 @@ const PersonalInfo = () => {
           </Form>
         )}
       </Formik>
-      <div className="w-full flex justify-center items-center">
-        <SuccessModal />
-      </div>
     </>
   );
 };

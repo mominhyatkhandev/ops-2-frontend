@@ -1,4 +1,6 @@
 'use client';
+import useCounter from '@/hooks/useCounter';
+import Link from 'next/link';
 import React, { useRef, useEffect, useState, KeyboardEvent } from 'react';
 
 function OTP({
@@ -10,6 +12,7 @@ function OTP({
 }) {
   const [otp, setOtp] = useState(new Array(numberOfDigits).fill(''));
   const [otpError, setOtpError] = useState<string | null>(null);
+  const { formattedCount, count } = useCounter({ initialCount: 10 });
   const otpBoxReference = useRef<HTMLInputElement[]>([]);
 
   function handleChange(value: string, index: number) {
@@ -65,9 +68,17 @@ function OTP({
         </p>
       ) : null}
 
-      <div className="text-xs font-normal text-secondary-600">
-        Resend otp in MM:SS
-      </div>
+      {count > 0 ? (
+        <div className="text-xs font-normal text-secondary-600">
+          Resend OTP in 00:{formattedCount}
+        </div>
+      ) : (
+        <Link href="/">
+          <div className="text-xs leading-tight font-normal text-primary-base underline">
+            Resend OTP
+          </div>
+        </Link>
+      )}
     </article>
   );
 }
